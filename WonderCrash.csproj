@@ -328,6 +328,7 @@
     <Compile Include="Assets\Scripts\IA\DetectPlayer.cs" />
     <Compile Include="Assets\Scripts\IA\Guard.cs" />
     <Compile Include="Assets\Scripts\IA\IAGuard.cs" />
+    <Compile Include="Assets\Scripts\InteractionPerso.cs" />
     <Compile Include="Assets\Scripts\InteractionPnj.cs" />
     <Compile Include="Assets\Scripts\Player\CameraFPS.cs" />
     <Compile Include="Assets\Scripts\Player\Character.cs" />
@@ -339,6 +340,8 @@
     <Compile Include="Assets\Scripts\UI\FacingPlayer.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
     <Compile Include="Assets\Scripts\UI\MentalSlider.cs" />
+    <Compile Include="Assets\Scripts\UI\Personalities.cs" />
+    <Compile Include="Assets\Scripts\UI\PersonalityManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Environment\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
