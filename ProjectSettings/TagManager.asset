@@ -8,6 +8,8 @@ TagManager:
   - Icon3
   - Icon1
   - Icon0
+  - Obtsacle
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -18,8 +20,8 @@ TagManager:
   - 
   - 
   - Player
-  - 
-  - 
+  - Obstacle
+  - Guard
   - 
   - 
   - 

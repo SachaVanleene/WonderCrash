@@ -21,12 +21,12 @@ public class IAGuard : MonoBehaviour {
 
     public LayerMask maskLayer;
 
-    public GameObject player;
+    private GameObject player;
 
     public GameObject cone;
 
-
-    [SerializeField] List<GameObject> Destination;
+    GameObject[] dest;
+    List<GameObject> Destination;
 
     private void Awake()
     {
@@ -37,6 +37,9 @@ public class IAGuard : MonoBehaviour {
         isMovingToDestnation = false;
         timeSinceNotSeenPlayer = 0f;
         timeNeededToEscape = 1f;
+        player = GameObject.FindGameObjectWithTag("Player");
+        dest = GameObject.FindGameObjectsWithTag("RoamingDestination");
+        Destination = new List<GameObject>(dest);
     }
 
 
