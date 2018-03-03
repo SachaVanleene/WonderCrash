@@ -139,7 +139,7 @@ public class IAGuard : MonoBehaviour {
 
     public void IncreaseDetectionValue()
     {
-        detectionBar.value += 0.01f;
+        detectionBar.value += 0.001f;
         /* Vector3 agentVector = new Vector3(transform.position.x, 0f, transform.position.z);
          Vector3 targetVector = new Vector3(currentDestination.position.x, 0f, currentDestination.position.z);
          float distance = Vector3.Distance(agentVector,targetVector);
