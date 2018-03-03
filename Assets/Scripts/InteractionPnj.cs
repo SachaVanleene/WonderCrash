@@ -1,15 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class InteractionPnj : MonoBehaviour {
+public class InteractionPnj : MonoBehaviour
+{
 
     public int id;
     private int minDistToTalk = 20;
     private GameObject player;
     private List<Interaction> qList;
 
-    public GameObject panel, canvasDialogue;
+    public GameObject panel, canvasDialogue, panelInfo;
     private Interaction qCourante, qSuivante;
     private List<Rep> reponsesQuestion;
 
@@ -17,19 +19,21 @@ public class InteractionPnj : MonoBehaviour {
     private PlayerController pc;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         player = GameObject.FindWithTag("Player");
         dm = canvasDialogue.GetComponent<DialogueManager>();
         pc = player.GetComponent<PlayerController>();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
 
         Vector3 distToPlayer = player.transform.position - gameObject.transform.position;
-        
+
         if (distToPlayer.magnitude < minDistToTalk && Input.GetKeyDown(KeyCode.E))
-        { 
+        {
             panel.SetActive(true);
             int currentCharacter = pc.getCurrentCharacter();
             qList = dm.GetDialogue(0, id, currentCharacter);
@@ -41,5 +45,31 @@ public class InteractionPnj : MonoBehaviour {
             dm.AfficheDialogue(qCourante, qList);
         }
 
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            panelInfo.SetActive(true);
+            panelInfo.GetComponentInChildren<Text>().text = "appuyer sur E pour interagir";
+        }
+
+    }
+    void OnTriggerStay()
+    {
+        /*if (Input.GetKeyDown(Keycode.E))
+        {
+            Debug.Log("interaction");
+        }*/
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            panelInfo.SetActive(false);
+            panelInfo.GetComponentInChildren<Text>().text = "";
+        }
     }
 }
