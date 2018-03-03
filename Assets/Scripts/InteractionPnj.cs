@@ -30,20 +30,6 @@ public class InteractionPnj : MonoBehaviour
     void Update()
     {
 
-        Vector3 distToPlayer = player.transform.position - gameObject.transform.position;
-
-        if (distToPlayer.magnitude < minDistToTalk && Input.GetKeyDown(KeyCode.E))
-        {
-            panel.SetActive(true);
-            int currentCharacter = pc.getCurrentCharacter();
-            qList = dm.GetDialogue(0, id, currentCharacter);
-
-            qCourante = qList[0];
-            dm.setButtonQuestion(qCourante.interaction);
-            reponsesQuestion = qCourante.reponseListe;
-
-            dm.AfficheDialogue(qCourante, qList);
-        }
 
     }
 
@@ -58,10 +44,19 @@ public class InteractionPnj : MonoBehaviour
     }
     void OnTriggerStay()
     {
-        /*if (Input.GetKeyDown(Keycode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("interaction");
-        }*/
+            panel.SetActive(true);
+            int currentCharacter = pc.getCurrentCharacter();
+            qList = dm.GetDialogue(0, id, currentCharacter);
+
+            qCourante = qList[0];
+            dm.setButtonQuestion(qCourante.interaction);
+            reponsesQuestion = qCourante.reponseListe;
+
+            dm.AfficheDialogue(qCourante, qList);
+        }
     }
 
     void OnTriggerExit(Collider other)
