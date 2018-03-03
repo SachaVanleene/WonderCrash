@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WonderCrash", "Assembly-CSharp-firstpass.csproj", "{1F1ACA1E-E5E3-BD43-363D-506D82CE57F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WonderCrash", "Assembly-CSharp.csproj", "{2363D72B-AED3-61F9-9697-D4935DF02C77}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WonderCrash", "Assembly-CSharp-Editor.csproj", "{38C85FCE-1D03-528D-14C5-004B1C307DA2}"
 EndProject
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1F1ACA1E-E5E3-BD43-363D-506D82CE57F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1F1ACA1E-E5E3-BD43-363D-506D82CE57F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1F1ACA1E-E5E3-BD43-363D-506D82CE57F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1F1ACA1E-E5E3-BD43-363D-506D82CE57F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2363D72B-AED3-61F9-9697-D4935DF02C77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2363D72B-AED3-61F9-9697-D4935DF02C77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2363D72B-AED3-61F9-9697-D4935DF02C77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2363D72B-AED3-61F9-9697-D4935DF02C77}.Release|Any CPU.Build.0 = Release|Any CPU
 		{38C85FCE-1D03-528D-14C5-004B1C307DA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{38C85FCE-1D03-528D-14C5-004B1C307DA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38C85FCE-1D03-528D-14C5-004B1C307DA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
