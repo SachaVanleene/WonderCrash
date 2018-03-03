@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/cell.unity
+- path: Assets/ayoubTest.unity
   isLoaded: 1
   isActive: 1
