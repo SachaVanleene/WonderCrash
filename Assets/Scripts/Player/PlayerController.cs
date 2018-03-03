@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
 
     public float speed = 4.0f;
     private int[] characters;
@@ -10,20 +11,34 @@ public class PlayerController : MonoBehaviour {
     Character characterComponenet;
     private Vector3 movment;
     PlayerStats stats;
+    public float RandomChangePeriode = 3f;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         characters = new int[] { 1, 2, 3 };
         characterComponenet = GetComponent<Character>();
         mainIcon = GameObject.FindGameObjectWithTag("Icon0").GetComponent<UnityEngine.UI.Image>();
+        characterComponenet.setCharacter(characters[0]);
+        mainIcon.sprite = characterComponenet.getCurrentSprite();
+        GameObject.FindGameObjectWithTag("Icon" + 1).GetComponent<UnityEngine.UI.Image>().sprite = characterComponenet.getSpriteByCharacter(characters[1]);
+        GameObject.FindGameObjectWithTag("Icon" + 2).GetComponent<UnityEngine.UI.Image>().sprite = characterComponenet.getSpriteByCharacter(characters[2]);
         stats = GetComponent<PlayerStats>();
     }
 
+    
     // Update is called once per frame
     void Update()
     {
+        if (!stats.isCrazy())
+        {
+            changeCharacter();
+        }
+        else
+        {
+            
+        }
 
-        changeCharacter();
         float h = 0f;
         float v = 0f;
         h = Input.GetAxisRaw("Horizontal");
@@ -57,7 +72,7 @@ public class PlayerController : MonoBehaviour {
     {
         return characters;
     }
-    
+
     public int getCurrentCharacter()
     {
         return characters[0];
@@ -65,35 +80,48 @@ public class PlayerController : MonoBehaviour {
 
     void changeCharacter()
     {
+
         if (Input.GetKeyDown(KeyCode.Alpha1) && characters[0] != 1)
         {
-            int lastCharacter = characters[0];
-            int index = findIndexOf(1);
-            characters[findIndexOf(1)] = lastCharacter;
-            characters[0] = 1;
-            characterComponenet.setCharacter(1);
-            mainIcon.sprite = characterComponenet.getCurrentSprite();
-            GameObject.FindGameObjectWithTag("Icon" + index).GetComponent<UnityEngine.UI.Image>().sprite = characterComponenet.getSpriteByCharacter(lastCharacter);
+            getCharacter(1);
+            stats.incrCraziness(1);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2) && characters[0] != 2)
         {
-            int lastCharacter = characters[0];
-            int index = findIndexOf(2);
-            characters[index] = lastCharacter;
-            characters[0] = 2;
-            characterComponenet.setCharacter(2);
-            mainIcon.sprite = characterComponenet.getCurrentSprite();
-            GameObject.FindGameObjectWithTag("Icon" + index).GetComponent<UnityEngine.UI.Image>().sprite = characterComponenet.getSpriteByCharacter(lastCharacter);
+            getCharacter(2);
+            stats.incrCraziness(1);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3) && characters[0] != 3)
         {
-            int lastCharacter = characters[0];
-            int index = findIndexOf(3);
-            characters[index] = lastCharacter;
-            characters[0] = 3;
-            characterComponenet.setCharacter(3);
-            mainIcon.sprite = characterComponenet.getCurrentSprite();
-            GameObject.FindGameObjectWithTag("Icon" + index).GetComponent<UnityEngine.UI.Image>().sprite = characterComponenet.getSpriteByCharacter(lastCharacter);
+            getCharacter(3);
+
+            // Police man get the player crazy faster 
+            stats.incrCraziness(2);
         }
+
+    }
+
+    void getCharacter(int character)
+    {
+        int lastCharacter = characters[0];
+        int index = findIndexOf(character);
+        characters[findIndexOf(character)] = lastCharacter;
+        characters[0] = character;
+        characterComponenet.setCharacter(character);
+        mainIcon.sprite = characterComponenet.getCurrentSprite();
+        GameObject.FindGameObjectWithTag("Icon" + index).GetComponent<UnityEngine.UI.Image>().sprite = characterComponenet.getSpriteByCharacter(lastCharacter);
+    }
+
+    public IEnumerator RandomChange()
+    {
+        yield return new WaitForSeconds(RandomChangePeriode);
+        int character = Random.Range(1, 4);
+        while (character == characters[0])
+        {
+            character = Random.Range(1, 3);
+        }
+        getCharacter(character);
+
+        StartCoroutine(RandomChange());
     }
 }
