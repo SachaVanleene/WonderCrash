@@ -34,10 +34,6 @@ public class PlayerController : MonoBehaviour
         {
             changeCharacter();
         }
-        else
-        {
-            
-        }
 
         float h = 0f;
         float v = 0f;
