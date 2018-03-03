@@ -60,12 +60,15 @@ public class IAGuard : MonoBehaviour {
 
     public void ChasePlayer(GameObject player)
     {
-        currentDestination = player.transform;
-        //playerTransform = player.transform;
-        timeSinceNotSeenPlayer = 0f;
-        movingToPlayer = true;
-        isMovingToDestnation = true;
-        anim.SetBool("moving",true);
+        if (!movingToPlayer)
+        {
+            currentDestination = player.transform;
+            //playerTransform = player.transform;
+            timeSinceNotSeenPlayer = 0f;
+            movingToPlayer = true;
+            isMovingToDestnation = true;
+            anim.SetBool("moving", true);
+        }
     }
 
     Transform GetNextDestination() // Obtenir une destination assez éloigné pour avoir un meilleur comportement 

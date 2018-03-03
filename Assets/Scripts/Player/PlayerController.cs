@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     PlayerStats stats;
     public float RandomChangePeriode = 3f;
 
+    public delegate void onPersonallityChange();
+    public onPersonallityChange onTriggerPersonallityChanged; //Prévenir touts les loups que je suis mort
+
     // Use this for initialization
     void Start()
     {
@@ -98,7 +101,6 @@ public class PlayerController : MonoBehaviour
             // Police man get the player crazy faster 
             stats.incrCraziness(2);
         }
-
     }
 
     void getCharacter(int character)
@@ -110,6 +112,7 @@ public class PlayerController : MonoBehaviour
         characterComponenet.setCharacter(character);
         mainIcon.sprite = characterComponenet.getCurrentSprite();
         GameObject.FindGameObjectWithTag("Icon" + index).GetComponent<UnityEngine.UI.Image>().sprite = characterComponenet.getSpriteByCharacter(lastCharacter);
+        onTriggerPersonallityChanged.Invoke();
     }
 
     public IEnumerator RandomChange()
@@ -123,5 +126,10 @@ public class PlayerController : MonoBehaviour
         getCharacter(character);
 
         StartCoroutine(RandomChange());
+    }
+
+    public void addGuard(PlayerController.onPersonallityChange function)
+    {
+        onTriggerPersonallityChanged += function;
     }
 }
