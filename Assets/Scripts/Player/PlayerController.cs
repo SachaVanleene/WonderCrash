@@ -14,7 +14,20 @@ public class PlayerController : MonoBehaviour
     public float RandomChangePeriode = 3f;
 
     public delegate void onPersonallityChange();
-    public onPersonallityChange onTriggerPersonallityChanged; //Prévenir touts les loups que je suis mort
+    public onPersonallityChange onTriggerPersonallityChanged; //PRévenir que j'ai changé de personnalité
+
+    AudioSource step;
+    bool moving;
+    float movingTime; // depusi combien de temps je bouge 
+
+
+
+
+    private void Awake()
+    {
+        moving = false;
+        movingTime = 0;
+    }
 
     // Use this for initialization
     void Start()
@@ -27,6 +40,7 @@ public class PlayerController : MonoBehaviour
         GameObject.FindGameObjectWithTag("Icon" + 1).GetComponent<UnityEngine.UI.Image>().sprite = characterComponenet.getSpriteByCharacter(characters[1]);
         GameObject.FindGameObjectWithTag("Icon" + 2).GetComponent<UnityEngine.UI.Image>().sprite = characterComponenet.getSpriteByCharacter(characters[2]);
         stats = GetComponent<PlayerStats>();
+        step = GetComponent<AudioSource>();
     }
 
     
@@ -46,6 +60,31 @@ public class PlayerController : MonoBehaviour
         {
             Move(h, v);
 
+        }
+        //Audio Management 
+        if (Mathf.Abs(h + v) > 0)
+        {
+            movingTime += Time.deltaTime;
+            if (moving)
+            {
+                if(movingTime> 2.611f)
+                {
+                    step.Play();
+                    movingTime = 0f;
+                }
+            }else
+            {
+                moving = true;
+                step.Play();
+            }
+        } else
+        {
+            moving = false;
+            movingTime = 0f;
+            if (step.isPlaying)
+            {
+                step.Stop();
+            }
         }
 
     }
