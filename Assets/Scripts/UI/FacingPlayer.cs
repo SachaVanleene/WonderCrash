@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class FacingPlayer : MonoBehaviour {
 
-    public Camera m_Camera;
+    private GameObject cam;
+    private Camera m_Camera;
+
+    private void Start()
+    {
+        cam = GameObject.FindGameObjectWithTag("MainCamera");
+        m_Camera = cam.GetComponent<Camera>();
+    }
 
     void Update()
     {
