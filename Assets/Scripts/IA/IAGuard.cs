@@ -102,7 +102,7 @@ public class IAGuard : MonoBehaviour {
                 Vector3 direction = (playerTransform.position - (transform.position + upTransform)).normalized;
                 if (Physics.Linecast(cone.transform.position, playerTransform.position, out hit,maskLayer))
                 {
-                    //Debug.LogError("Ca collide tag"+hit.transform.tag);
+                    Debug.LogError("Ca collide tag"+hit.transform.tag);
                     Debug.DrawLine(cone.transform.position, playerTransform.position, Color.red);
                     Debug.DrawLine(cone.transform.position, hit.transform.position, Color.green);
                     if (hit.transform.tag == "Player")
