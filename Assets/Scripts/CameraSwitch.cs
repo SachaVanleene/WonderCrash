@@ -21,5 +21,9 @@ public class CameraSwitch : MonoBehaviour {
             mainCamera.enabled = !mainCamera.enabled;
             mapCamera.enabled = !mapCamera.enabled;
         }
+        else
+        {
+
+        }
 	}
 }
