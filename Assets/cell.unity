@@ -113,45 +113,49 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &941878579
+--- !u!1001 &1768286187
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4671421302107736, guid: ce84e0828fd0c614f8f2384501947534, type: 2}
+    - target: {fileID: 4253301377302966, guid: a185b01de6c7d9345a0aa9986ce28fa1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -93.143776
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4671421302107736, guid: ce84e0828fd0c614f8f2384501947534, type: 2}
+    - target: {fileID: 4253301377302966, guid: a185b01de6c7d9345a0aa9986ce28fa1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 73.44024
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4671421302107736, guid: ce84e0828fd0c614f8f2384501947534, type: 2}
+    - target: {fileID: 4253301377302966, guid: a185b01de6c7d9345a0aa9986ce28fa1, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 66.27951
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4671421302107736, guid: ce84e0828fd0c614f8f2384501947534, type: 2}
+    - target: {fileID: 4253301377302966, guid: a185b01de6c7d9345a0aa9986ce28fa1, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4671421302107736, guid: ce84e0828fd0c614f8f2384501947534, type: 2}
+    - target: {fileID: 4253301377302966, guid: a185b01de6c7d9345a0aa9986ce28fa1, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4671421302107736, guid: ce84e0828fd0c614f8f2384501947534, type: 2}
+    - target: {fileID: 4253301377302966, guid: a185b01de6c7d9345a0aa9986ce28fa1, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4671421302107736, guid: ce84e0828fd0c614f8f2384501947534, type: 2}
+    - target: {fileID: 4253301377302966, guid: a185b01de6c7d9345a0aa9986ce28fa1, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4671421302107736, guid: ce84e0828fd0c614f8f2384501947534, type: 2}
+    - target: {fileID: 4253301377302966, guid: a185b01de6c7d9345a0aa9986ce28fa1, type: 2}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1021952625067050, guid: a185b01de6c7d9345a0aa9986ce28fa1, type: 2}
+      propertyPath: m_Name
+      value: Couloir_droit_lampe
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ce84e0828fd0c614f8f2384501947534, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: a185b01de6c7d9345a0aa9986ce28fa1, type: 2}
   m_IsPrefabParent: 0
