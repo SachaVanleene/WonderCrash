@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WonderCrash", "WonderCrash.csproj", "{D7468CD2-0F32-5226-78C3-0F933CB123CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WonderCrash.Editor", "WonderCrash.Editor.csproj", "{C41FF889-2E5D-75C8-7EB5-DF513AAA2BC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{D7468CD2-0F32-5226-78C3-0F933CB123CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7468CD2-0F32-5226-78C3-0F933CB123CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7468CD2-0F32-5226-78C3-0F933CB123CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C41FF889-2E5D-75C8-7EB5-DF513AAA2BC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C41FF889-2E5D-75C8-7EB5-DF513AAA2BC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C41FF889-2E5D-75C8-7EB5-DF513AAA2BC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C41FF889-2E5D-75C8-7EB5-DF513AAA2BC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

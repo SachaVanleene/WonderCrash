@@ -5,14 +5,16 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour {
 
     private bool spotted;
-    public int maxPersonalityChange = 8;
-    private float currentPersonalityChange;
+    private bool crazy;
+    public float maxChange = 8;
+    private float currentChange;
 
 
     // Use this for initialization
     void Start () {
         spotted = false;
-        currentPersonalityChange = 0;
+        crazy = false;
+        currentChange = 0;
     }
 	
 
@@ -26,8 +28,30 @@ public class PlayerStats : MonoBehaviour {
         spotted = spot;
     }
 
+    public bool isCrazy()
+    {
+        return crazy;
+    }
+
+    public void incrCraziness(int incr)
+    {
+        if (!isCrazy()) currentChange += incr;
+    }
+
+    public float getCurrentChange()
+    {
+        return currentChange;
+    }
+
 	// Update is called once per frame
 	void Update () {
-		
+
+        if (currentChange >= maxChange && !crazy)
+        {
+            crazy = true;
+            PlayerController script = GetComponent<PlayerController>();
+            StartCoroutine(script.RandomChange());
+        }
+
 	}
 }
