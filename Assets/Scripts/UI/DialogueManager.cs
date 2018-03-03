@@ -25,7 +25,7 @@ public class DialogueManager : MonoBehaviour {
     }
 
     public void Start() {
-
+        Time.timeScale = 1;
         //qList = GetDialogue(0, 2, 1);
 
         ////if(player.transform.position < certaineDistance && mouseClick && !hasSpokento)
@@ -58,6 +58,8 @@ public class DialogueManager : MonoBehaviour {
 
     public void AfficheDialogue(Interaction qCourante, List<Interaction> m_qList)
     {
+
+        Time.timeScale = 0;
         qList = m_qList;
         question.text = qCourante.interaction;
         reponsesQuestion = qCourante.reponseListe;
@@ -86,6 +88,7 @@ public class DialogueManager : MonoBehaviour {
     public void EndConversation()
     {
         panel.SetActive(false);
+        Time.timeScale = 1;
     }
 
    
