@@ -713,6 +713,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4636396589860074}
   - component: {fileID: 95712381449977120}
+  - component: {fileID: 114809763606555130}
+  - component: {fileID: 65551660465767182}
   m_Layer: 0
   m_Name: Doctor
   m_TagString: Untagged
@@ -1794,9 +1796,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1693919643809670}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.83, y: 0, z: 12.06}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalRotation: {x: -0, y: 0.43588766, z: -0, w: 0.90000117}
+  m_LocalPosition: {x: -87.24204, y: -5.3185005, z: -71.6192}
+  m_LocalScale: {x: 0.050000012, y: 0.05, z: 0.050000012}
   m_Children:
   - {fileID: 4614007315538622}
   - {fileID: 4979515074848336}
@@ -1807,7 +1809,7 @@ Transform:
   - {fileID: 4649654523051978}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 51.684002, z: 0}
 --- !u!4 &4639779047323540
 Transform:
   m_ObjectHideFlags: 1
@@ -2163,6 +2165,18 @@ Transform:
   m_Father: {fileID: 4636396589860074}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65551660465767182
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1693919643809670}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 300, y: 400, z: 300}
+  m_Center: {x: 0, y: 100, z: 0}
 --- !u!95 &95712381449977120
 Animator:
   serializedVersion: 3
@@ -2180,6 +2194,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114809763606555130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1693919643809670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875eaed129212fb4788ac4aec9cdb77a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 3
+  panel: {fileID: 0}
+  canvasDialogue: {fileID: 0}
+  panelInfo: {fileID: 0}
 --- !u!137 &137089550136827330
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
