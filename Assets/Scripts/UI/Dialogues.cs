@@ -69,10 +69,14 @@ public static class Dialogues {
         //Conversation (niveau 0, pnj 3, personalité 2)
         {"0.3.2", new Conv { interactionListe = new List<Interaction>() {
             new Interaction { id = 1, interaction = "Bonjour collègue. Comment allez-vous aujourd’hui ?", reponseListe = new List<Rep>() {
-                new Rep { reponse = "Pas terrible à vrai dire… Un patient vient tout juste de me faire un croche-patte alors que je me baladais dans le couloir...", interacSuiv = 2, soupcon = 0 }
+                new Rep { reponse = "Pas terrible à vrai dire… Un patient vient tout juste de me faire un croche-patte alors que je me baladais dans le couloir...", interacSuiv = 2, soupcon = 0 },
+                new Rep { reponse = "Argh, je passe un mauvaise journée! J'ai encore oublié mon stéthoscope dans la salle des gardes...", interacSuiv = 3, soupcon = 1 },
+                new Rep { reponse = "Ça va plutôt bien, mais j'ai oublié comment rejoindre l'étage du dessus", interacSuiv = 4, soupcon = 2 }
                 }
             },
-            new Interaction { id = 2, interaction = "Quoi ?! Ce genre de comportement est intolérable ! Prenez les clés sur la table et allez voir les gardiens dans leur bureau au bout du couloir pour leur en faire part.", reponseListe = null }
+            new Interaction { id = 2, interaction = "Quoi ?! Ce genre de comportement est intolérable ! Prenez les clés sur la table et allez voir les gardiens dans leur bureau au bout du couloir pour leur en faire part.", reponseListe = null },
+            new Interaction { id = 3, interaction = "Haha, tu es bien malin ! Je crois que la porte est ouverte, tu peux aller voir.", reponseListe = null },
+            new Interaction { id = 4, interaction = "... D'accord. Parles-en aux gardes peut-être...", reponseListe = null },
         } } }
 
         //**************************************************************************************
