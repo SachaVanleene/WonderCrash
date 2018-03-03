@@ -989,8 +989,8 @@ GameObject:
   m_Name: Cone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 40
   m_IsActive: 1
 --- !u!1 &1797234882641014
 GameObject:
@@ -1391,9 +1391,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1193915136396280}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -109.20906, y: 147.52904, z: 45.9}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 4664728379976450}
   - {fileID: 4053727131041654}
@@ -1413,7 +1413,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1781987070271286}
   m_LocalRotation: {x: -9.313226e-10, y: 2.6193447e-10, z: 1.7126922e-10, w: 1}
-  m_LocalPosition: {x: 0.005002144, y: 0.028636888, z: 0.011512833}
+  m_LocalPosition: {x: 0.005, y: 0.029, z: 0.026}
   m_LocalScale: {x: 1, y: 0.58035797, z: 3.3702934}
   m_Children: []
   m_Father: {fileID: 4794258201338036}
@@ -3010,7 +3010,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 15
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 200
