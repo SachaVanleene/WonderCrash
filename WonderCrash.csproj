@@ -303,14 +303,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\IA\DetectPlayer.cs" />
     <Compile Include="Assets\Scripts\IA\Guard.cs" />
     <Compile Include="Assets\Scripts\IA\IAGuard.cs" />
     <Compile Include="Assets\Scripts\Player\CameraFPS.cs" />
-    <Compile Include="Assets\Scripts\Player\Player.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Player\Character.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\UI\FacingPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
