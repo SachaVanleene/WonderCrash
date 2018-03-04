@@ -149,8 +149,7 @@ public class IAGuard : MonoBehaviour {
         detectionBar.value += 0.002f;
         if(detectionBar.value == 1 && !player.GetComponent<PlayerStats>().getSpotted())
         {
-            player.GetComponent<PlayerStats>().setSpotted(true);
-            gameManager.GetComponent<Manager>().SpottedEnd();
+            player.GetComponent<PlayerStats>().setSpotted(true);           
         }
     }
 
