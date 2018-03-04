@@ -25,7 +25,7 @@ public class RepulsiveWall : MonoBehaviour {
             if(force != null)
             {
                 player.speed = 0;
-                obj.GetComponent<Rigidbody>().AddForce(force, ForceMode.VelocityChange);
+                obj.GetComponent<Rigidbody>().AddForce(force);
             }
         }
     }
