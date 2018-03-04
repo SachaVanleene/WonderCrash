@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -4928,26 +4928,31 @@ Prefab:
     - target: {fileID: 224298073889851640, guid: ae573a54acdaf3c49a644cb5dc4cb553,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0.305
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224298073889851640, guid: ae573a54acdaf3c49a644cb5dc4cb553,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224892207314378474, guid: ae573a54acdaf3c49a644cb5dc4cb553,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0.351
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224892207314378474, guid: ae573a54acdaf3c49a644cb5dc4cb553,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae573a54acdaf3c49a644cb5dc4cb553, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &186325355 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1693522685049562, guid: ae573a54acdaf3c49a644cb5dc4cb553,
+    type: 2}
+  m_PrefabInternal: {fileID: 186325354}
 --- !u!1001 &188059520
 Prefab:
   m_ObjectHideFlags: 0
@@ -9818,7 +9823,7 @@ MonoBehaviour:
   end_text: {fileID: 1135067772}
   player: {fileID: 0}
   finalDoor: {fileID: 2046884956}
-  panelInfo: {fileID: 1702599934}
+  panelInfo: {fileID: 186325355}
 --- !u!1 &365722983
 GameObject:
   m_ObjectHideFlags: 0
@@ -39574,7 +39579,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 180}
 --- !u!1 &1702599934 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 1693522685049562, guid: ae573a54acdaf3c49a644cb5dc4cb553,
+  m_PrefabParentObject: {fileID: 1678706758821586, guid: ae573a54acdaf3c49a644cb5dc4cb553,
     type: 2}
   m_PrefabInternal: {fileID: 186325354}
 --- !u!1 &1704679024
