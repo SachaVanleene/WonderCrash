@@ -28,7 +28,7 @@ public class DialogueManager : MonoBehaviour {
     }
 
     public void Start() {
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
         player = GameObject.FindGameObjectWithTag("Player");
         ps = player.GetComponent<PlayerStats>();
         //qList = GetDialogue(0, 2, 1);
