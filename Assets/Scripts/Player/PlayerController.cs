@@ -20,9 +20,9 @@ public class PlayerController : MonoBehaviour
     bool moving;
     float movingTime; // depusi combien de temps je bouge
 
-    public bool talking;
+    public bool talking;    
 
-
+    private Rigidbody rb;
 
 
     private void Awake()
@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
         moving = false;
         movingTime = 0;
         talking = false;
+        rb = GetComponent<Rigidbody>();
     }
 
     // Use this for initialization
@@ -97,9 +98,11 @@ public class PlayerController : MonoBehaviour
 
     void Move(float h, float v)
     {
-        movment.Set(h, 0f, v);
-        movment = movment.normalized * speed * Time.deltaTime;
-        transform.Translate(movment);
+        movment = (h * transform.right + v * transform.forward).normalized;
+        rb.velocity = movment * speed;
+        //transform.Translate(movment);
+        
+        
     }
 
     int findIndexOf(int character)

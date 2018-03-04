@@ -11,7 +11,7 @@ public class TutoFinished : MonoBehaviour {
     {
         if(other.gameObject.tag == "Player")
         {
-            gameManager.GetComponent<Manager>().GoToNextLevel(0);
+            gameManager.GetComponent<Manager>().GoToNextLevel(2);
         }
     }
 
