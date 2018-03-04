@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class CameraSwitch : MonoBehaviour {
 
-     private Camera mainCamera;
+    
     public GameObject cam;
     [SerializeField] private Camera mapCamera;
+    [SerializeField] private GameObject UI;
 
-	// Use this for initialization
-	void Start () {
+    private Camera mainCamera;
+
+    // Use this for initialization
+    void Start () {
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         mainCamera = cam.GetComponent<Camera>();
         mainCamera.enabled = true;
@@ -23,10 +26,7 @@ public class CameraSwitch : MonoBehaviour {
         {
             mainCamera.enabled = !mainCamera.enabled;
             mapCamera.enabled = !mapCamera.enabled;
-        }
-        else
-        {
-
+            UI.SetActive(!UI.activeSelf);
         }
 	}
 }

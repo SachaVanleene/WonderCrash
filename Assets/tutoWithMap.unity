@@ -18704,6 +18704,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 931069752}
   m_Mesh: {fileID: 4300012, guid: f3f4205fd6059fe468f6ca2b14d13617, type: 3}
+--- !u!1 &935291537 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1655774273928674, guid: ae573a54acdaf3c49a644cb5dc4cb553,
+    type: 2}
+  m_PrefabInternal: {fileID: 529436318}
 --- !u!1 &946152485
 GameObject:
   m_ObjectHideFlags: 0
@@ -37263,6 +37268,23 @@ Prefab:
     - target: {fileID: 1689210718152114, guid: 1a58977964530244bb3be2208bee0a46, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1538359851281360, guid: 1a58977964530244bb3be2208bee0a46, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114405525173999112, guid: 1a58977964530244bb3be2208bee0a46,
+        type: 2}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 935291537}
+    - target: {fileID: 4976398861337320, guid: 1a58977964530244bb3be2208bee0a46, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.121
+      objectReference: {fileID: 0}
+    - target: {fileID: 4976398861337320, guid: 1a58977964530244bb3be2208bee0a46, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2.3075664
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a58977964530244bb3be2208bee0a46, type: 2}
