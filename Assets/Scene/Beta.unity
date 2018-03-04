@@ -9728,6 +9728,7 @@ MonoBehaviour:
   player: {fileID: 0}
   finalDoor: {fileID: 2046884956}
   panelInfo: {fileID: 186325355}
+  cellHeroDoor: {fileID: 0}
 --- !u!1 &365722983
 GameObject:
   m_ObjectHideFlags: 0
@@ -17976,6 +17977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2
+  door: {fileID: 0}
   panel: {fileID: 953784312}
   canvasDialogue: {fileID: 953784311}
   panelInfo: {fileID: 1702599934}
@@ -31496,6 +31498,7 @@ GameObject:
   - component: {fileID: 1334411800}
   - component: {fileID: 1334411803}
   - component: {fileID: 1334411804}
+  - component: {fileID: 1334411805}
   m_Layer: 0
   m_Name: Door
   m_TagString: Door
@@ -31598,6 +31601,86 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelInfo: {fileID: 1702599934}
+--- !u!82 &1334411805
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1334411798}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1334786361
 GameObject:
   m_ObjectHideFlags: 0
@@ -35485,6 +35568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
+  door: {fileID: 0}
   panel: {fileID: 953784312}
   canvasDialogue: {fileID: 953784311}
   panelInfo: {fileID: 1702599934}
@@ -42658,6 +42742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 4
+  door: {fileID: 0}
   panel: {fileID: 953784312}
   canvasDialogue: {fileID: 953784311}
   panelInfo: {fileID: 1702599934}
@@ -43440,6 +43525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3
+  door: {fileID: 0}
   panel: {fileID: 953784312}
   canvasDialogue: {fileID: 953784311}
   panelInfo: {fileID: 1702599934}

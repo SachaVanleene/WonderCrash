@@ -11,6 +11,7 @@ public class Manager : MonoBehaviour {
     int notepadToGet;
     public GameObject finalDoor;
     public GameObject panelInfo;
+    public GameObject cellHeroDoor;
     // Use this for initialization
 
 
@@ -58,6 +59,11 @@ public class Manager : MonoBehaviour {
     public void removeNotePad()
     {
         notepadToGet -= 1;
+        if(notepadToGet == 2)
+        {
+            cellHeroDoor = GameObject.Find("Door_hero");
+            cellHeroDoor.tag = "Door";
+        }
         if(notepadToGet == 0)
         {
             //Debug.LogError("Je passe ce tuto de merde");
