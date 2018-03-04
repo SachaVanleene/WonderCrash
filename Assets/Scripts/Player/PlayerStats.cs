@@ -11,7 +11,9 @@ public class PlayerStats : MonoBehaviour {
     public float maxSoupconLevel;
     private float currentSoupcon;
 
+
     GameObject gameManager;
+
 
     // Use this for initialization
     void Start () {
@@ -58,6 +60,7 @@ public class PlayerStats : MonoBehaviour {
                 setSpotted(true);
             }
         }
+
     }
 
 
@@ -79,6 +82,10 @@ public class PlayerStats : MonoBehaviour {
             crazy = true;
             PlayerController script = GetComponent<PlayerController>();
             StartCoroutine(script.RandomChange());
+        }
+        if(currentSoupcon >= maxSoupconLevel && !spotted)
+        {
+            setSpotted(true);
         }
 
 	}
