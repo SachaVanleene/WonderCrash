@@ -11,6 +11,9 @@ public class PlayerStats : MonoBehaviour {
     public float maxSoupconLevel;
     private float currentSoupcon;
 
+    GameObject gameManager;
+
+
 
     // Use this for initialization
     void Start () {
@@ -18,6 +21,8 @@ public class PlayerStats : MonoBehaviour {
         crazy = false;
         currentChange = 0;
         currentSoupcon = 0;
+
+        gameManager = GameObject.FindGameObjectWithTag("GameManager");
     }
 	
 
@@ -29,6 +34,10 @@ public class PlayerStats : MonoBehaviour {
     public void setSpotted(bool spot)
     {
         spotted = spot;
+        if (spotted)
+        {
+            gameManager.GetComponent<Manager>().SpottedEnd();
+        }
     }
 
     public bool isCrazy()

@@ -11,6 +11,7 @@ public class DetectPlayer : MonoBehaviour {
     float timeToDetechChangement;
     private GameObject player;
     PlayerController script_player;
+    public LayerMask mask;
 
 
 
@@ -56,7 +57,7 @@ public class DetectPlayer : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             RaycastHit hit;
-            if (Physics.Linecast(transform.position, other.gameObject.transform.position, out hit)) // ne pas détecter le joeur derrière un mur 
+            if (Physics.Linecast(transform.position, other.gameObject.transform.position, out hit,mask)) // ne pas détecter le joeur derrière un mur 
             {
                 if (hit.transform.tag == "Player" && (hit.transform.gameObject.GetComponent<PlayerController>().getCurrentCharacter() !=3) )
                 {
