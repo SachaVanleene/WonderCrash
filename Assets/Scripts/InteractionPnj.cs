@@ -34,7 +34,7 @@ public class InteractionPnj : MonoBehaviour
         if (other.gameObject.tag == "Player" && hasTalked[pc.getCurrentCharacter() - 1] == false)
         {
             panelInfo.SetActive(true);
-            panelInfo.GetComponentInChildren<Text>().text = "appuyer sur E pour interagir";
+            panelInfo.GetComponentInChildren<Text>().text = "Appuyer sur E pour interagir";
         }
 
     }

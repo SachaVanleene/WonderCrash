@@ -29,7 +29,9 @@ public class Manager : MonoBehaviour {
 	}
     public void SpottedEnd()
     {
-        end_text.SetActive(true);
+        panelInfo.SetActive(true);
+        panelInfo.GetComponentInChildren<Text>().text = "Votre désorde mental vous a fait défaut. \n C'est dans l'ordre des choses de vous remettre en chambre";
+        //end_text.SetActive(true);
         Pause();
         StartCoroutine(waitBeforeGoToMenu());
     }
