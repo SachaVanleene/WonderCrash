@@ -53,6 +53,9 @@ public class PlayerController : MonoBehaviour
     {
         if (!stats.isCrazy())
         {
+            if (characters[0] == 2) stats.incrCraziness(15);
+            else if (characters[0] == 3) stats.incrCraziness(20);
+            else if(stats.getCurrentChange()>=2) stats.incrCraziness(-2);
             changeCharacter();
         }
 
@@ -134,19 +137,19 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1) && characters[0] != 1)
         {
             getCharacter(1);
-            stats.incrCraziness(1);
+           
         }
         if (Input.GetKeyDown(KeyCode.Alpha2) && characters[0] != 2)
         {
             getCharacter(2);
-            stats.incrCraziness(1);
+           
         }
         if (Input.GetKeyDown(KeyCode.Alpha3) && characters[0] != 3)
         {
             getCharacter(3);
 
             // Police man get the player crazy faster 
-            stats.incrCraziness(2);
+            
         }
     }
 
