@@ -121,7 +121,7 @@ public class IAGuard : MonoBehaviour {
                         IncreaseDetectionValue();
                         timeSinceNotSeenPlayer = 0f;
                     }
-                    if (hit.transform.tag == "Obstacle")
+                    if (hit.transform.gameObject.layer == 9)
                     {
                         timeSinceNotSeenPlayer += Time.deltaTime;
                     }
