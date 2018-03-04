@@ -22893,6 +22893,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 82317098317079202, guid: 7915d709e4b44294db7ac23372602b06,
+        type: 2}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7915d709e4b44294db7ac23372602b06, type: 2}
   m_IsPrefabParent: 0
@@ -25695,6 +25700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c0a1d1803b4fd4ca7180a1bb858e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panel: {fileID: 865841742}
 --- !u!4 &1047352723 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4745387288348396, guid: bd20dee50c0d22d40a35d621ca6b4743,
