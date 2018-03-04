@@ -68,11 +68,8 @@ public class InteractionPnj : MonoBehaviour
             panelInfo.SetActive(false);
             panelInfo.GetComponentInChildren<Text>().text = "";
 
-            print(dm.GetProgress());
-
             if (dm.GetProgress() == "OK")
             {
-                print("yolo");
                 door.GetComponent<DoorPivoter>().SwitchDoor();
             }
         }
