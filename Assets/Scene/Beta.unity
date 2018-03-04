@@ -10051,6 +10051,11 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 64929318834776708, guid: 536ce625bcb6a8a448bdf1a57e2d5251,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 536ce625bcb6a8a448bdf1a57e2d5251, type: 2}
   m_IsPrefabParent: 0
@@ -16270,6 +16275,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   pivotAngle: 60
+  door_open: {fileID: 0}
+  door_close: {fileID: 0}
+  door_locked: {fileID: 0}
 --- !u!1001 &664622587
 Prefab:
   m_ObjectHideFlags: 0
@@ -17624,6 +17632,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   pivotAngle: 60
+  door_open: {fileID: 0}
+  door_close: {fileID: 0}
+  door_locked: {fileID: 0}
 --- !u!65 &735479687
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17746,6 +17757,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   pivotAngle: 60
+  door_open: {fileID: 0}
+  door_close: {fileID: 0}
+  door_locked: {fileID: 0}
 --- !u!65 &743415574
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31500,8 +31514,8 @@ GameObject:
   - component: {fileID: 1334411804}
   - component: {fileID: 1334411805}
   m_Layer: 0
-  m_Name: Door
-  m_TagString: Door
+  m_Name: Door_hero
+  m_TagString: Door_locked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 41
@@ -31589,6 +31603,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   pivotAngle: -120
+  door_open: {fileID: 8300000, guid: 43c5136cc8221584eb035001b6a95a52, type: 3}
+  door_close: {fileID: 8300000, guid: d209c6e0cf216fa4599fcafe0fd735b6, type: 3}
+  door_locked: {fileID: 0}
 --- !u!114 &1334411804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31611,7 +31628,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -31668,13 +31685,13 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 2
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -36729,6 +36746,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   pivotAngle: 60
+  door_open: {fileID: 0}
+  door_close: {fileID: 0}
+  door_locked: {fileID: 0}
 --- !u!65 &1580641246
 BoxCollider:
   m_ObjectHideFlags: 0
