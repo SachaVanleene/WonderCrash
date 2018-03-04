@@ -47,6 +47,8 @@ GameObject:
   - component: {fileID: 114995616065230648}
   - component: {fileID: 114452316450227532}
   - component: {fileID: 82317098317079202}
+  - component: {fileID: 65357611345658742}
+  - component: {fileID: 65843506848314508}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -109,8 +111,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1505895262303126}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.8, y: 9.72, z: 37.109665}
+  m_LocalRotation: {x: 0, y: 0.86602545, z: 0, w: 0.49999994}
+  m_LocalPosition: {x: 13.4, y: 9.72, z: 2.8}
   m_LocalScale: {x: 3.9804986, y: 10.71277, z: 5.344602}
   m_Children:
   - {fileID: 4471998767487374}
@@ -118,7 +120,7 @@ Transform:
   - {fileID: 4997281372701400}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 120, z: 0}
 --- !u!4 &4940873724833332
 Transform:
   m_ObjectHideFlags: 1
@@ -271,13 +273,37 @@ Rigidbody:
   m_GameObject: {fileID: 1505895262303126}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: Infinity
-  m_AngularDrag: Infinity
+  m_Drag: 0
+  m_AngularDrag: 0.5
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 1
+--- !u!65 &65357611345658742
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1505895262303126}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.99999994}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65843506848314508
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1505895262303126}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.99999994}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65958196592240234
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -463,7 +489,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 892ec3c22f0230a4e916d3c8ce1331a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxChange: 8
+  maxChange: 100
+  maxSoupconLevel: 100
 --- !u!124 &124765566850196080
 Behaviour:
   m_ObjectHideFlags: 1
@@ -481,7 +508,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.55407846
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0.05407849, z: 0}
 --- !u!135 &135242683055208838
 SphereCollider:

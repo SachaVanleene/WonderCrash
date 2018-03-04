@@ -12,6 +12,9 @@ TagManager:
   - Obstacle
   - Interaction1
   - RoamingDestination
+  - Door
+  - InteractionPanel
+  - Door_couloir
   layers:
   - Default
   - TransparentFX

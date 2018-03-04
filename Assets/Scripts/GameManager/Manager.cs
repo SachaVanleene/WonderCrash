@@ -11,6 +11,7 @@ public class Manager : MonoBehaviour {
     int notepadToGet;
     public GameObject finalDoor;
     public GameObject panelInfo;
+    public GameObject cellHeroDoor;
     // Use this for initialization
 
 
@@ -30,7 +31,7 @@ public class Manager : MonoBehaviour {
     public void SpottedEnd()
     {
         panelInfo.SetActive(true);
-        panelInfo.GetComponentInChildren<Text>().text = "Votre désorde mental vous a fait défaut. \n C'est dans l'ordre des choses de vous remettre en chambre";
+        panelInfo.GetComponentInChildren<Text>().text = "Game Over : Vous vous êtes fait repérer. Redirection vers le menu.";
         //end_text.SetActive(true);
         Pause();
         StartCoroutine(waitBeforeGoToMenu());
@@ -43,7 +44,7 @@ public class Manager : MonoBehaviour {
     }
     IEnumerator waitBeforeGoToMenu()
     {
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 
@@ -58,6 +59,11 @@ public class Manager : MonoBehaviour {
     public void removeNotePad()
     {
         notepadToGet -= 1;
+        if(notepadToGet == 2)
+        {
+            cellHeroDoor = GameObject.Find("Door_hero");
+            cellHeroDoor.GetComponent<DoorPivoter>().Unlock();
+        }
         if(notepadToGet == 0)
         {
             //Debug.LogError("Je passe ce tuto de merde");

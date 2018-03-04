@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InteractionPnj : MonoBehaviour
 {
-
     public int id;
+    public GameObject door;
     private bool[] hasTalked = new bool[] { false,false,false };
 
     private int minDistToTalk = 20;
@@ -19,6 +20,7 @@ public class InteractionPnj : MonoBehaviour
 
     private DialogueManager dm;
     private PlayerController pc;
+    private Scene currentScene;
 
     // Use this for initialization
     void Start()
@@ -26,6 +28,7 @@ public class InteractionPnj : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         dm = canvasDialogue.GetComponent<DialogueManager>();
         pc = player.GetComponent<PlayerController>();
+        currentScene = SceneManager.GetActiveScene();
     }
 
 
@@ -34,27 +37,35 @@ public class InteractionPnj : MonoBehaviour
         if (other.gameObject.tag == "Player" && hasTalked[pc.getCurrentCharacter() - 1] == false)
         {
             panelInfo.SetActive(true);
-            panelInfo.GetComponentInChildren<Text>().text = "Appuyer sur E pour interagir";
+            panelInfo.GetComponentInChildren<Text>().text = "E pour interagir";
         }
 
     }
-    void OnTriggerStay()
+    void OnTriggerStay(Collider other)
     {
+        if (other.gameObject.tag == "Player" && hasTalked[pc.getCurrentCharacter() - 1] == false)
+        {
+            panelInfo.SetActive(true);
+            panelInfo.GetComponentInChildren<Text>().text = "E pour interagir";
+        }
+        if (other.gameObject.tag == "Player" && hasTalked[pc.getCurrentCharacter() - 1] == true)
+        {
+            panelInfo.SetActive(false);
+            panelInfo.GetComponentInChildren<Text>().text = "E pour interagir";
+        }
         if (Input.GetKeyDown(KeyCode.E) && hasTalked[pc.getCurrentCharacter()-1] == false)
         {
             panel.SetActive(true);
             int currentCharacter = pc.getCurrentCharacter();
-            qList = dm.GetDialogue(0, id, currentCharacter);
+            Debug.LogError(currentScene.buildIndex - 1);
+            qList = dm.GetDialogue(currentScene.buildIndex - 1, id, currentCharacter);
 
             qCourante = qList[0];
             dm.setButtonQuestion(qCourante.interaction);
             reponsesQuestion = qCourante.reponseListe;
             dm.AfficheDialogue(qCourante, qList);
-
-            for (int i = 0; i < 3; i++)
-            {
                 hasTalked[pc.getCurrentCharacter()-1] = true;
-            }
+            panelInfo.SetActive(false);
         }
     }
 
@@ -64,7 +75,11 @@ public class InteractionPnj : MonoBehaviour
         {
             panelInfo.SetActive(false);
             panelInfo.GetComponentInChildren<Text>().text = "";
-            
+
+            if (dm.GetProgress() == "OK")
+            {
+                door.GetComponent<DoorPivoter>().SwitchDoor();
+            }
         }
 
     }

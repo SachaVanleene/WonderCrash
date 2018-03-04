@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 movment;
     PlayerStats stats;
     public float RandomChangePeriode = 3f;
+    float elapsed = 0f;
 
     public delegate void onPersonallityChange();
     public onPersonallityChange onTriggerPersonallityChanged; //PRévenir que j'ai changé de personnalité
@@ -20,9 +21,9 @@ public class PlayerController : MonoBehaviour
     bool moving;
     float movingTime; // depusi combien de temps je bouge
 
-    public bool talking;
+    public bool talking;    
 
-
+    private Rigidbody rb;
 
 
     private void Awake()
@@ -30,6 +31,7 @@ public class PlayerController : MonoBehaviour
         moving = false;
         movingTime = 0;
         talking = false;
+        rb = GetComponent<Rigidbody>();
     }
 
     // Use this for initialization
@@ -52,6 +54,18 @@ public class PlayerController : MonoBehaviour
     {
         if (!stats.isCrazy())
         {
+            elapsed += Time.deltaTime;
+
+            if (elapsed >= 1f) {
+                elapsed = 0;
+
+                Debug.Log("change : " + stats.getCurrentChange() + "id : " + characters[0]);
+                if (characters[0] == 2) stats.incrCraziness(15);
+                else if (characters[0] == 3) stats.incrCraziness(20);
+                else if (stats.getCurrentChange() >= 2) stats.incrCraziness(-2);
+                Debug.Log("change : " + stats.getCurrentChange() + "id : " + characters[0]);
+            }
+            
             changeCharacter();
         }
 
@@ -66,6 +80,9 @@ public class PlayerController : MonoBehaviour
         {
             Move(h, v);
 
+        } else {
+            movment = (h * transform.right + v * transform.forward).normalized;
+            rb.velocity = movment * 0f;
         }
         //Audio Management 
         if (Mathf.Abs(h + v) > 0)
@@ -97,9 +114,11 @@ public class PlayerController : MonoBehaviour
 
     void Move(float h, float v)
     {
-        movment.Set(h, 0f, v);
-        movment = movment.normalized * speed * Time.deltaTime;
-        transform.Translate(movment);
+        movment = (h * transform.right + v * transform.forward).normalized;
+        rb.velocity = movment * speed;
+        //transform.Translate(movment);
+        
+        
     }
 
     int findIndexOf(int character)
@@ -128,19 +147,19 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1) && characters[0] != 1)
         {
             getCharacter(1);
-            stats.incrCraziness(1);
+           
         }
         if (Input.GetKeyDown(KeyCode.Alpha2) && characters[0] != 2)
         {
             getCharacter(2);
-            stats.incrCraziness(1);
+           
         }
         if (Input.GetKeyDown(KeyCode.Alpha3) && characters[0] != 3)
         {
             getCharacter(3);
 
             // Police man get the player crazy faster 
-            stats.incrCraziness(2);
+            
         }
     }
 
@@ -156,18 +175,17 @@ public class PlayerController : MonoBehaviour
         onTriggerPersonallityChanged.Invoke();
     }
 
-    public IEnumerator RandomChange()
-    {
+    public IEnumerator RandomChange() {
         yield return new WaitForSeconds(RandomChangePeriode);
         int character = Random.Range(1, 4);
-        while (character == characters[0])
-        {
+        while (character == characters[0]) {
             character = Random.Range(1, 3);
         }
         getCharacter(character);
 
         StartCoroutine(RandomChange());
     }
+
 
     public void addGuard(PlayerController.onPersonallityChange function)
     {

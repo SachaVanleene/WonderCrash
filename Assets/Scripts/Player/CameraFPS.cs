@@ -30,7 +30,7 @@ public class CameraFPS : MonoBehaviour {
         sensHorizontal = 2.0f;
         sensVertical = 2.0f;
 
-        _rotationX = 0;
+        _rotationX = 30f;
 
         talking = false;
 }

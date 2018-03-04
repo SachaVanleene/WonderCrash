@@ -35,56 +35,56 @@ public static class Dialogues {
         //Conversation (niveau 0, pnj 1, personalité 1)
         {"0.1.1", new Conv { interactionListe = new List<Interaction>() {
             new Interaction { id = 1, interaction = "Salut Ernest… ou Jack, ou…je ne sais quel prénom tu préfères aujourd’hui. Tu vas bien ?", reponseListe = new List<Rep>() {
-                new Rep { reponse = "... ça pourrait aller mieux vu l’endroit où on est. Écoute, je cherche à foutre le camp d’ici. T’aurais pas un petit contact qui m’aiderait ?", interacSuiv = 2, soupcon = Random.Range(10,60) },
-                new Rep { reponse = "... Je vais toujours bien moi. Mais j'ai besoin de ton aide pour partir d'ici. Tu connais quelqu'un non ?", interacSuiv = 2, soupcon = Random.Range(10,60) },
-                new Rep { reponse = "... Non ça va pas, faut que je parte d'ici. T'aurais pas un contact pour m'aider ?", interacSuiv = 2, soupcon = Random.Range(10,60) }
+                new Rep { reponse = "... ça pourrait aller mieux vu l’endroit où on est. Écoute, je cherche à foutre le camp d’ici. T’aurais pas un petit contact qui m’aiderait ?", interacSuiv = 2, soupcon =0 },
+                new Rep { reponse = "... Je vais toujours bien moi. Mais j'ai besoin de ton aide pour partir d'ici. Tu connais quelqu'un non ?", interacSuiv = 2, soupcon =0 },
+                new Rep { reponse = "... Non ça va pas, faut que je parte d'ici. T'aurais pas un contact pour m'aider ?", interacSuiv = 2, soupcon = 0 }
                 }
             },
-            new Interaction { id = 2, interaction = "Ouais ouais je connais quelqu’un. Ya Marco qui traîne souvent dans la salle commune… Va le voir, il connaît bien cet étage. Mais fait gaffe d’être poli si tu veux des réponses, il aime pas être contrarié ce gars là.", reponseListe = null }
+            new Interaction { id = 2, interaction = "Ouais ouais je connais quelqu’un. Ya Marco qui traîne souvent dans la salle commune… Va le voir, il connaît bien cet étage. Mais fait gaffe d’être poli si tu veux des réponses, il aime pas être contrarié ce gars là. Pour y aller, prend à gauche puis ce sera une grande porte à droite.", reponseListe = null }
         } } },
 
         //Conversation (niveau 0, pnj 2, personalité 1)
         {"0.2.1", new Conv { interactionListe = new List<Interaction>() {
             new Interaction { id = 1, interaction = "On s'connaît ?", reponseListe = new List<Rep>() {
-                new Rep { reponse = "Bonjour Marco! Moi c’est Ernest, content de te rencontrer. Fred m’a dit que tu pourrais peut-être m’aider.", interacSuiv = 2, soupcon = Random.Range(10,60) },
-                new Rep { reponse = "Pas encore. Moi c’est Ernest, c’est ton ami Fred qui m’a dit de venir te voir pour un service.", interacSuiv = 3, soupcon = Random.Range(10,60) },
-                new Rep { reponse = "Non, mais j’aurais un petit service à te demander.", interacSuiv = 4, soupcon = Random.Range(10,60) }
+                new Rep { reponse = "Bonjour Marco! Moi c’est Ernest, content de te rencontrer. Fred m’a dit que tu pourrais peut-être m’aider.", interacSuiv = 2, soupcon = 0 },
+                new Rep { reponse = "Pas encore. Moi c’est Ernest, c’est ton ami Fred qui m’a dit de venir te voir pour un service.", interacSuiv = 3, soupcon = 0 },
+                new Rep { reponse = "Non, mais j’aurais un petit service à te demander.", interacSuiv = 4, soupcon = 0 }
                 }
             },
             new Interaction { id = 2, interaction = "Ah, ça fait du bien d’entendre un peu de politesse par ici!  Qu’est ce qu’il te faut mon ami ?", reponseListe = new List<Rep>() {
-                new Rep { reponse = "Je cherche à m’évader d’ici mais je ne sais pas par où commencer...", interacSuiv = 5, soupcon = Random.Range(10,60) },
-                new Rep { reponse = "Faut que j’me barre, j’ai rien à foutre dans cet asile moi. Je suis sain d’esprit, sain d'esprit, tu vois. Tu peux m’aider ?", interacSuiv = 5, soupcon = Random.Range(10,60) },
-                new Rep { reponse = "Faut que j'mévade !", interacSuiv = 5, soupcon = Random.Range(10,60) }
+                new Rep { reponse = "Je cherche à m’évader d’ici mais je ne sais pas par où commencer...", interacSuiv = 5, soupcon = 0 },
+                new Rep { reponse = "Faut que j’me barre, j’ai rien à foutre dans cet asile moi. Je suis sain d’esprit, sain d'esprit, tu vois. Tu peux m’aider ?", interacSuiv = 5, soupcon = 0 },
+                new Rep { reponse = "Faut que j'mévade !", interacSuiv = 5, soupcon = 0 }
                 }
             },
             new Interaction { id = 3, interaction = "Un ami de Fred est un ami à moi! Qu’est ce qu’il de faut ?", reponseListe = new List<Rep>() {
-                new Rep { reponse = "Je cherche à m’évader d’ici mais je ne sais pas par où commencer...", interacSuiv = 6, soupcon = Random.Range(10,60) },
-                new Rep { reponse = "Faut que j’me barre, j’ai rien à foutre dans cet asile moi. Je suis sain d’esprit, sain d'esprit, tu vois. Tu peux m’aider ?", interacSuiv = 6, soupcon = Random.Range(10,60) },
-                new Rep { reponse = "Faut que j'mévade !", interacSuiv = 6, soupcon = Random.Range(10,60) }
+                new Rep { reponse = "Je cherche à m’évader d’ici mais je ne sais pas par où commencer...", interacSuiv = 6, soupcon = 0 },
+                new Rep { reponse = "Faut que j’me barre, j’ai rien à foutre dans cet asile moi. Je suis sain d’esprit, sain d'esprit, tu vois. Tu peux m’aider ?", interacSuiv = 6, soupcon = 0 },
+                new Rep { reponse = "Faut que j'mévade !", interacSuiv = 6, soupcon = 0 }
                 }
             },
             new Interaction { id = 4, interaction = "Un bonjour ne ferait pas de mal. Qu’es tu veux ?", reponseListe = new List<Rep>() {
-                new Rep { reponse = "Je cherche à m’évader d’ici mais je ne sais pas par où commencer...", interacSuiv = 7, soupcon = Random.Range(10,60) },
-                new Rep { reponse = "Faut que j’me barre, j’ai rien à foutre dans cet asile moi. Je suis sain d’esprit, sain d'esprit, tu vois. Tu peux m’aider ?", interacSuiv = 7, soupcon = Random.Range(10,60) },
-                new Rep { reponse = "Faut que j'mévade !", interacSuiv = 7, soupcon = Random.Range(10,60) }
+                new Rep { reponse = "Je cherche à m’évader d’ici mais je ne sais pas par où commencer...", interacSuiv = 7, soupcon =0 },
+                new Rep { reponse = "Faut que j’me barre, j’ai rien à foutre dans cet asile moi. Je suis sain d’esprit, sain d'esprit, tu vois. Tu peux m’aider ?", interacSuiv = 7, soupcon = 0 },
+                new Rep { reponse = "Faut que j'mévade !", interacSuiv = 7, soupcon = 0 }
                 }
             },
-            new Interaction { id = 5, interaction = "J’connais l’asile comme ma poche mon pote. Si tu veux t’évader, commence par rentrer dans la salle de pause des médecins, ils ont des clés qui donnent accès à pas mal d’endroits. Mais attention, ils ne font pas confiance à tout le monde... ", reponseListe = null },
-            new Interaction { id = 6, interaction = "T’as de la chance, je connais bien l’asile. Va voir dans le coin de pause des médecins, ils peuvent t’ouvrir pas mal de portes par ici.", reponseListe = null },
-            new Interaction { id = 7, interaction = "Regarde dans les salles de ce couloir, j’entends que les médecins sont en pause. Et reviens surtout pas me voir.", reponseListe = null }
+            new Interaction { id = 5, interaction = "J’connais l’asile comme ma poche mon pote. Si tu veux t’évader, commence par rentrer dans la salle de pause des médecins en face, ils ont des clés qui donnent accès à pas mal d’endroits. Mais attention, ils ne font pas confiance à tout le monde... ", reponseListe = null },
+            new Interaction { id = 6, interaction = "T’as de la chance, je connais bien l’asile. Va voir dans le coin de pause des médecins en face, ils peuvent t’ouvrir pas mal de portes par ici.", reponseListe = null },
+            new Interaction { id = 7, interaction = "Regarde dans la salle en face, j’entends que les médecins sont en pause. Et reviens surtout pas me voir.", reponseListe = null }
         } } },
 
         //Conversation (niveau 0, pnj 3, personalité 2)
         {"0.3.2", new Conv { interactionListe = new List<Interaction>() {
             new Interaction { id = 1, interaction = "Bonjour collègue. Comment allez-vous aujourd’hui ?", reponseListe = new List<Rep>() {
-                new Rep { reponse = "Pas terrible à vrai dire… Un patient vient tout juste de me faire un croche-patte alors que je me baladais dans le couloir...", interacSuiv = 2, soupcon = Random.Range(10,60) },
-                new Rep { reponse = "Argh, je passe un mauvaise journée! J'ai encore oublié mon stéthoscope dans la salle des gardes...", interacSuiv = 3, soupcon = Random.Range(10,60) },
-                new Rep { reponse = "Ça va plutôt bien, mais j'ai oublié comment rejoindre l'étage du dessus", interacSuiv = 4, soupcon = Random.Range(10,60) }
+                new Rep { reponse = "Pas terrible à vrai dire… Un patient vient tout juste de me faire un croche-patte alors que je me baladais dans le couloir...", interacSuiv = 2, soupcon = 15 },
+                new Rep { reponse = "Argh, je passe un mauvaise journée! J'ai encore oublié mon stéthoscope dans la salle des gardes...", interacSuiv = 3, soupcon = 0 },
+                new Rep { reponse = "Ça va plutôt bien, mais j'ai oublié comment rejoindre l'étage du dessus", interacSuiv = 4, soupcon = 20 }
                 }
             },
             new Interaction { id = 2, interaction = "Quoi ?! Ce genre de comportement est intolérable ! Prenez les clés sur la table et allez voir les gardiens dans leur bureau au bout du couloir pour leur en faire part.", reponseListe = null },
-            new Interaction { id = 3, interaction = "Haha, tu es bien malin ! Je crois que la porte est ouverte, tu peux aller voir.", reponseListe = null },
-            new Interaction { id = 4, interaction = "... D'accord. Parles-en aux gardes peut-être...", reponseListe = null },
+            new Interaction { id = 3, interaction = "Haha, tu es bien malin ! Je crois que la porte est ouverte, tu peux aller voir au bout du couloir.", reponseListe = null },
+            new Interaction { id = 4, interaction = "... D'accord. Parles-en aux gardes au bout du couloir peut-être...", reponseListe = null },
         } } },
 
 
@@ -98,8 +98,8 @@ public static class Dialogues {
         {"1.1.1", new Conv { interactionListe = new List<Interaction>() {
             new Interaction { id = 1, interaction = "Eh ! Vous n’êtes pas censés vous balader tout seul dans les couloirs. Qu’est ce que vous faites ?", reponseListe = new List<Rep>() {
                 new Rep { reponse = "Je vous cherchais justement, j’ai un peu mal au ventre...", interacSuiv = 2, soupcon = 0, progress = Unlock.KO },
-                new Rep { reponse = "Je me suis perdu", interacSuiv = 2, soupcon = 5, progress = Unlock.KO },
-                new Rep { reponse = "J’admirais l’architecture de cette vieille bâtisse", interacSuiv = 2, soupcon = 10, progress = Unlock.KO }
+                new Rep { reponse = "Je me suis perdu", interacSuiv = 2, soupcon = 15, progress = Unlock.KO },
+                new Rep { reponse = "J’admirais l’architecture de cette vieille bâtisse", interacSuiv = 2, soupcon = 20, progress = Unlock.KO }
                 }
             },
             new Interaction { id = 2, interaction = "Je ne vous crois pas ! Retournez à votre cellule !", reponseListe = null }
@@ -114,8 +114,8 @@ public static class Dialogues {
                 }
             },
             new Interaction { id = 2, interaction = "Il m’avait semblé que c’était une opération au coeur pourtant...", reponseListe = new List<Rep>() {
-                new Rep { reponse = "C’était les deux ! Ce patient en a plus pour longtemps à mon avis...", interacSuiv = 3, soupcon = 20, progress = Unlock.KO },
-                new Rep { reponse = "Celui là c’était hier, quand vous n’étiez pas là.", interacSuiv = 4, soupcon = 5, progress = Unlock.OK },
+                new Rep { reponse = "C’était les deux ! Ce patient en a plus pour longtemps à mon avis...", interacSuiv = 3, soupcon = 30, progress = Unlock.KO },
+                new Rep { reponse = "Celui là c’était hier, quand vous n’étiez pas là.", interacSuiv = 4, soupcon = 15, progress = Unlock.OK },
                 new Rep { reponse = "Peut être bien, je suis fatigué, je ne sais plus ce que je raconte. Je vais me reposer.", interacSuiv = 5, soupcon = 0, progress = Unlock.OK}
                 }
             },
@@ -125,8 +125,8 @@ public static class Dialogues {
             new Interaction { id = 6, interaction = "Les aléas du métier malheureusement. Peut être que vous devriez vous reposer. Je ne vous embête pas plus longtemps.", reponseListe = null },
             new Interaction { id = 7, interaction = "Je vous ai connu plus bavard. Vous allez bien ?", reponseListe = new List<Rep>() {
                 new Rep { reponse = "Juste un peu de fatigue.", interacSuiv = 8, soupcon = 0, progress = Unlock.OK },
-                new Rep { reponse = "Je ne me reconnais plus", interacSuiv = 9, soupcon = 20, progress = Unlock.KO },
-                new Rep { reponse = "Vous doutez de moi ?", interacSuiv = 10, soupcon = 15, progress = Unlock.KO }
+                new Rep { reponse = "Je ne me reconnais plus", interacSuiv = 9, soupcon = 30, progress = Unlock.KO },
+                new Rep { reponse = "Vous doutez de moi ?", interacSuiv = 10, soupcon = 25, progress = Unlock.KO }
                 }
             },
             new Interaction { id = 8, interaction = "D’accord. Continuez votre chemin et allez dormir alors.", reponseListe = null },
@@ -137,9 +137,9 @@ public static class Dialogues {
         //Conversation (niveau 1, pnj 1, personalité 3)
         {"1.1.3", new Conv { interactionListe = new List<Interaction>() {
             new Interaction { id = 1, interaction = "Passage interdit monsieur ! Il y a un grave malade parmis les patients. La zone est en quarantaine.", reponseListe = new List<Rep>() {
-                new Rep { reponse = "Mais je suis pressé ! Un patient dangereux aux personnalités multiples tente de s’évader !", interacSuiv = 2, soupcon = 2, progress = Unlock.KO },
+                new Rep { reponse = "Mais je suis pressé ! Un patient dangereux aux personnalités multiples tente de s’évader !", interacSuiv = 2, soupcon = 15, progress = Unlock.KO },
                 new Rep { reponse = "Ah oui ? Bon. Espérons que ça n’aille pas plus loin.", interacSuiv = 2, soupcon = 0, progress = Unlock.KO },
-                new Rep { reponse = "Vous n’avez aucune autorité sur moi. Laissez moi passer !", interacSuiv = 2, soupcon = 1, progress = Unlock.KO }
+                new Rep { reponse = "Vous n’avez aucune autorité sur moi. Laissez moi passer !", interacSuiv = 2, soupcon = 10, progress = Unlock.KO }
                 }
             },
             new Interaction { id = 2, interaction = "Vous pouvez retrousser votre chemin. Aucune personne non docteur ne passe !", reponseListe = null }
@@ -211,7 +211,7 @@ public static class Dialogues {
         //Conversation (niveau 1, pnj 3, personalité 2)
         {"1.3.2", new Conv { interactionListe = new List<Interaction>() {
             new Interaction { id = 1, interaction = "J’ai pas rendez-vous aujourd’hui, qu’est ce que vous voulez ?", reponseListe = new List<Rep>() {
-                new Rep { reponse = "Rendez-vous santé du mois. Je dois vous examiner.", interacSuiv = 2, soupcon = 5, progress = Unlock.KO },
+                new Rep { reponse = "Rendez-vous santé du mois. Je dois vous examiner.", interacSuiv = 2, soupcon = 15, progress = Unlock.KO },
                 new Rep { reponse = "Il y a une quarantaine plus loin. Je dois vérifier que tout va bien ici.", interacSuiv = 3, soupcon = 0, progress = Unlock.OK },
                 new Rep { reponse = "Je cherche un garde. Vous en avez vu passer un ?", interacSuiv = 4, soupcon = 0, progress = Unlock.KO }
                 }
@@ -241,9 +241,9 @@ public static class Dialogues {
         //Conversation (niveau 1, pnj 4, personalité 1)
         {"1.4.1", new Conv { interactionListe = new List<Interaction>() {
             new Interaction { id = 1, interaction = "Bonjour. Votre tête me paraît familière, vous auriez pas un cousin qui travaille ici ?", reponseListe = new List<Rep>() {
-                new Rep { reponse = "Oui, il est médecin.", interacSuiv = 2, soupcon = 10, progress = Unlock.KO },
-                new Rep { reponse = "Oui il est gardien ici.", interacSuiv = 2, soupcon = 10, progress = Unlock.KO },
-                new Rep { reponse = "Non, j’aime juste bien me déguiser.", interacSuiv = 3, soupcon = 20, progress = Unlock.KO }
+                new Rep { reponse = "Oui, il est médecin.", interacSuiv = 2, soupcon = 20, progress = Unlock.KO },
+                new Rep { reponse = "Oui il est gardien ici.", interacSuiv = 2, soupcon = 20, progress = Unlock.KO },
+                new Rep { reponse = "Non, j’aime juste bien me déguiser.", interacSuiv = 3, soupcon = 30, progress = Unlock.KO }
                 }
             },
             new Interaction { id = 2, interaction = "Mmmm, pas sur. Je ne sais pas pourquoi, mais je ne vous fait pas confiance. Retournez d'où vous venez.", reponseListe = null },
@@ -254,29 +254,29 @@ public static class Dialogues {
         {"1.4.2", new Conv { interactionListe = new List<Interaction>() {
             new Interaction { id = 1, interaction = "Vous tombez à pic ! J’ai une patiente en urgence avec fièvre, pleurésie et péricardite. C’est un lupus non ?", reponseListe = new List<Rep>() {
                 new Rep { reponse = "Ce n’est jamais un lupus !", interacSuiv = 2, soupcon = 0},
-                new Rep { reponse = "Franchement aucune idée...", interacSuiv = 3, soupcon = 10, progress = Unlock.KO },
+                new Rep { reponse = "Franchement aucune idée...", interacSuiv = 3, soupcon = 20, progress = Unlock.KO },
                 new Rep { reponse = "Les symptômes ne mentent jamais !", interacSuiv = 4, soupcon = 0, progress = Unlock.KO }
                 }
             },
             new Interaction { id = 2, interaction = "C’est quoi alors ? Une sclérose en plaques ou une borréliose de lyme ?", reponseListe = new List<Rep>() {
-                new Rep { reponse = "Une sclérose en plaques", interacSuiv = 5, soupcon = 10, progress = Unlock.KO },
+                new Rep { reponse = "Une sclérose en plaques", interacSuiv = 5, soupcon = 20, progress = Unlock.KO },
                 new Rep { reponse = "Une borréliose de lyme", interacSuiv = 6, soupcon = 0, progress = Unlock.OK },
-                new Rep { reponse = "Une indigestion ?", interacSuiv = 7, soupcon = 50, progress = Unlock.KO }
+                new Rep { reponse = "Une indigestion ?", interacSuiv = 7, soupcon = 60, progress = Unlock.KO }
                 }
             },
             new Interaction { id = 3, interaction = "Le plus simple est que vous alliez la voir directement.", reponseListe = null },
             new Interaction { id = 4, interaction = "Dommage pour elle... Allez lui annoncer la mauvaise nouvelle !", reponseListe = null },
             new Interaction { id = 5, interaction = "Je pense pas que ça soit ça... Le plus simple est que vous alliez la voir directement.", reponseListe = null },
             new Interaction { id = 6, interaction = "Effectivement ça doit être cela. Je vais annoncer la nouvelle à la patiente.", reponseListe = null },
-            new Interaction { id = 6, interaction = "Mais vous n'êtes pas médecin? Vous êtes le patient en fuite ! GARDES !!", reponseListe = null },
+            new Interaction { id = 7, interaction = "Mais vous n'êtes pas médecin? Vous êtes le patient en fuite ! GARDES !!", reponseListe = null },
         } } },
 
         //Conversation (niveau 1, pnj 4, personalité 3)
         {"1.4.3", new Conv { interactionListe = new List<Interaction>() {
             new Interaction { id = 1, interaction = "Alors vous trouvez le détenu en fuite ?", reponseListe = new List<Rep>() {
                 new Rep { reponse = "Je suis à sa recherche en ce moment même !", interacSuiv = 2, soupcon = 0, progress = Unlock.KO },
-                new Rep { reponse = "Non mais il est 17h, j’ai fini ma journée moi !", interacSuiv = 3, soupcon = 15, progress = Unlock.KO },
-                new Rep { reponse = "Oui il est retourné dans sa cellule !", interacSuiv = 4, soupcon = 10, progress = Unlock.KO }
+                new Rep { reponse = "Non mais il est 17h, j’ai fini ma journée moi !", interacSuiv = 3, soupcon = 25, progress = Unlock.KO },
+                new Rep { reponse = "Oui il est retourné dans sa cellule !", interacSuiv = 4, soupcon = 20, progress = Unlock.KO }
                 }
             },
             new Interaction { id = 2, interaction = "Mmm. Cessez de vous promener et chercher le vraiment.", reponseListe = null },
@@ -292,20 +292,20 @@ public static class Dialogues {
         {"1.5.1", new Conv { interactionListe = new List<Interaction>() {
             new Interaction { id = 1, interaction = "Ah Ernest ! Je vous cherchais justement...", reponseListe = new List<Rep>() {
                 new Rep { reponse = "Je suis là. Que me voulez-vous ?", interacSuiv = 2, soupcon = 0 },
-                new Rep { reponse = "Désolé je suis pressé, je n’ai pas le temps !", interacSuiv = 3, soupcon = 10, progress = Unlock.OK },
+                new Rep { reponse = "Désolé je suis pressé, je n’ai pas le temps !", interacSuiv = 3, soupcon = 20, progress = Unlock.OK },
                 new Rep { reponse = "Non c’est moi qui vous cherchais.", interacSuiv = 4, soupcon = 0 }
                 }
             },
             new Interaction { id = 2, interaction = "Votre prise de sang indique que vous ne prenez toujours pas vos médocs. Qu’avez -vous à répondre à cela ?", reponseListe = new List<Rep>() {
-                new Rep { reponse = "Pouet !", interacSuiv = 5, soupcon = 5, progress = Unlock.KO },
+                new Rep { reponse = "Pouet !", interacSuiv = 5, soupcon = 15, progress = Unlock.KO },
                 new Rep { reponse = "Effectivement je ne les prends plus...", interacSuiv = 6, soupcon = 0, progress = Unlock.KO },
-                new Rep { reponse = "Plus besoin, je vais beaucoup mieux !", interacSuiv = 5, soupcon = 10, progress = Unlock.KO }
+                new Rep { reponse = "Plus besoin, je vais beaucoup mieux !", interacSuiv = 5, soupcon = 20, progress = Unlock.KO }
                 }
             },
             new Interaction { id = 4, interaction = "Pourquoi me cherchiez-vous ?", reponseListe = new List<Rep>() {
                 new Rep { reponse = "Je sors quand ?", interacSuiv = 7, soupcon = 0, progress = Unlock.KO },
                 new Rep { reponse = "Une urgence avec Marco, les infirmières vous cherchent!", interacSuiv = 8, soupcon = 0, progress = Unlock.OK },
-                new Rep { reponse = "Vous êtes viré !", interacSuiv = 5, soupcon = 10, progress = Unlock.KO }
+                new Rep { reponse = "Vous êtes viré !", interacSuiv = 5, soupcon = 20, progress = Unlock.KO }
                 }
             },
 
@@ -320,7 +320,7 @@ public static class Dialogues {
         {"1.5.2", new Conv { interactionListe = new List<Interaction>() {
             new Interaction { id = 1, interaction = "Pourquoi diable êtes-vous déguisé en docteur Ernest ? Vous cherchez à vous évader ?", reponseListe = new List<Rep>() {
                 new Rep { reponse = "Qui est Ernest ? Moi c’est Jean-Eude !", interacSuiv = 2, soupcon = 0, progress = Unlock.KO },
-                new Rep { reponse = "C'est la journée métier, du coup j’apprends des trucs au patient !", interacSuiv = 3, soupcon = 5, progress = Unlock.KO },
+                new Rep { reponse = "C'est la journée métier, du coup j’apprends des trucs au patient !", interacSuiv = 3, soupcon = 15, progress = Unlock.KO },
                 new Rep { reponse = "Arrêtez de me confondre avec Ernest !", interacSuiv = 4, soupcon = 0, progress = Unlock.OK }
                 }
             },
@@ -332,9 +332,9 @@ public static class Dialogues {
         //Conversation (niveau 1, pnj 5, personalité 2)
         {"1.5.3", new Conv { interactionListe = new List<Interaction>() {
             new Interaction { id = 1, interaction = "Bonjour ! Il me semble qu’un garde patrouille déjà ici.", reponseListe = new List<Rep>() {
-                new Rep { reponse = "Laisse moi passer où je t’enferme dans une cellule !", interacSuiv = 2, soupcon = 30, progress = Unlock.KO },
-                new Rep { reponse = "Je viens en back-up ! Un prisonnier est en fuite, on est sur un code 7030 !", interacSuiv = 3, soupcon = 10, progress = Unlock.OK },
-                new Rep { reponse = "Je vais voir la directrice de l’asile.", interacSuiv = 4, soupcon = 10, progress = Unlock.KO }
+                new Rep { reponse = "Laisse moi passer où je t’enferme dans une cellule !", interacSuiv = 2, soupcon = 40, progress = Unlock.KO },
+                new Rep { reponse = "Je viens en back-up ! Un prisonnier est en fuite, on est sur un code 7030 !", interacSuiv = 3, soupcon = 20, progress = Unlock.OK },
+                new Rep { reponse = "Je vais voir la directrice de l’asile.", interacSuiv = 4, soupcon = 20, progress = Unlock.KO }
                 }
             },
             new Interaction { id = 2, interaction = "GARDES ! GARDES ! GARDES !", reponseListe = null },
