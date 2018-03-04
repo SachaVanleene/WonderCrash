@@ -7,6 +7,7 @@ public class InteractionPnj : MonoBehaviour
 {
 
     public int id;
+    public GameObject door;
     private bool[] hasTalked = new bool[] { false,false,false };
 
     private int minDistToTalk = 20;
@@ -34,7 +35,7 @@ public class InteractionPnj : MonoBehaviour
         if (other.gameObject.tag == "Player" && hasTalked[pc.getCurrentCharacter() - 1] == false)
         {
             panelInfo.SetActive(true);
-            panelInfo.GetComponentInChildren<Text>().text = "Appuyer sur E pour interagir";
+            panelInfo.GetComponentInChildren<Text>().text = "E pour interagir";
         }
 
     }
@@ -64,7 +65,11 @@ public class InteractionPnj : MonoBehaviour
         {
             panelInfo.SetActive(false);
             panelInfo.GetComponentInChildren<Text>().text = "";
-            
+
+            if (dm.GetProgress() == "OK")
+            {
+                door.GetComponent<DoorPivoter>().SwitchDoor();
+            }
         }
 
     }
