@@ -23,6 +23,9 @@ public class AlerteFolie : MonoBehaviour {
         {
             isFlashing = true;
             StartCoroutine(Blink());
+        } else {
+            isFlashing = false;
+            icone.gameObject.SetActive(false);
         }
     }
 

@@ -81,6 +81,15 @@ public class DoorPivoter : MonoBehaviour {
         }  
     }
 
+    public void SwitchDoor_Bis() {
+        if (!isLocked) {
+            soundplaying = false;
+            isOpened = !isOpened;
+            isOpening = true;
+            isLocked = true;
+        }
+    }
+
     public void Unlock()
     {
         isLocked = false;

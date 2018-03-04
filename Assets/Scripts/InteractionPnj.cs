@@ -66,6 +66,9 @@ public class InteractionPnj : MonoBehaviour
             hasTalked[pc.getCurrentCharacter()-1] = true;
             panelInfo.SetActive(false);
         }
+        if (dm.GetProgress() == "OK") {
+            door.GetComponent<DoorPivoter>().SwitchDoor_Bis();
+        }
     }
 
     void OnTriggerExit(Collider other)
@@ -75,10 +78,10 @@ public class InteractionPnj : MonoBehaviour
             panelInfo.SetActive(false);
             panelInfo.GetComponentInChildren<Text>().text = "";
 
-            if (dm.GetProgress() == "OK")
+            /*if (dm.GetProgress() == "OK")
             {
                 door.GetComponent<DoorPivoter>().SwitchDoor();
-            }
+            }*/
         }
 
     }
