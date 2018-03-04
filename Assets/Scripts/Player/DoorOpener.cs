@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DoorOpener : MonoBehaviour {
 
+    private DoorPivoter neighbourDoor = null;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -13,12 +15,27 @@ public class DoorOpener : MonoBehaviour {
     {
         if(other.gameObject.CompareTag("Door"))
         {
-            other.gameObject.transform.eulerAngles += new Vector3(0, 45, 0);
+            Debug.Log(other.gameObject.name);
+            neighbourDoor = other.gameObject.GetComponent<DoorPivoter>();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Door"))
+        {
+            neighbourDoor = null;
         }
     }
 
     // Update is called once per frame
     void Update () {
-		
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if(neighbourDoor != null)
+            {
+                neighbourDoor.SwitchDoor();
+            }
+        }
 	}
 }
