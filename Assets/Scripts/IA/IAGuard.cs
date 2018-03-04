@@ -26,7 +26,7 @@ public class IAGuard : MonoBehaviour {
     public GameObject cone;
 
     GameObject[] dest;
-    List<GameObject> Destination;
+    public List<GameObject> Destination;
 
     private void Awake()
     {
@@ -39,7 +39,7 @@ public class IAGuard : MonoBehaviour {
         timeNeededToEscape = 1f;
         player = GameObject.FindGameObjectWithTag("Player");
         dest = GameObject.FindGameObjectsWithTag("RoamingDestination");
-        Destination = new List<GameObject>(dest);
+        //Destination = new List<GameObject>(dest);
     }
 
 

@@ -405,6 +405,8 @@ GameObject:
   - component: {fileID: 11757585}
   - component: {fileID: 11757584}
   - component: {fileID: 11757583}
+  - component: {fileID: 11757587}
+  - component: {fileID: 11757588}
   m_Layer: 0
   m_Name: NotepadG
   m_TagString: Untagged
@@ -485,6 +487,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11757587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 11757582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6a40fea62c3844189e3d200bd6b2e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelInfo: {fileID: 1702599934}
+--- !u!65 &11757588
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 11757582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.28072014, y: 0.026740778, z: 0.36065367}
+  m_Center: {x: -0.12604122, y: 0, z: -0.000000014901161}
 --- !u!1 &15107593
 GameObject:
   m_ObjectHideFlags: 0
@@ -11248,6 +11274,8 @@ GameObject:
   - component: {fileID: 451067798}
   - component: {fileID: 451067797}
   - component: {fileID: 451067796}
+  - component: {fileID: 451067800}
+  - component: {fileID: 451067801}
   m_Layer: 0
   m_Name: NotepadM
   m_TagString: Untagged
@@ -11328,6 +11356,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &451067800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 451067795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6a40fea62c3844189e3d200bd6b2e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelInfo: {fileID: 1702599934}
+--- !u!65 &451067801
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 451067795}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.28469124, y: 0.026740778, z: 0.36065367}
+  m_Center: {x: -0.12802677, y: 0, z: -0.000000014901161}
 --- !u!1 &456030479
 GameObject:
   m_ObjectHideFlags: 0
@@ -12931,6 +12983,8 @@ GameObject:
   - component: {fileID: 533763958}
   - component: {fileID: 533763957}
   - component: {fileID: 533763959}
+  - component: {fileID: 533763961}
+  - component: {fileID: 533763960}
   m_Layer: 0
   m_Name: Notepad
   m_TagString: Untagged
@@ -13011,6 +13065,30 @@ MonoBehaviour:
   id: 1
   panel: {fileID: 361280562}
   canvas: {fileID: 953784311}
+--- !u!65 &533763960
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 533763955}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2783124, y: 0.026740778, z: 0.36065367}
+  m_Center: {x: -0.124837354, y: 0, z: -0.000000014901161}
+--- !u!114 &533763961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 533763955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6a40fea62c3844189e3d200bd6b2e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelInfo: {fileID: 1702599934}
 --- !u!1 &534494062
 GameObject:
   m_ObjectHideFlags: 0
@@ -17612,6 +17690,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.3030739, y: 2.573441, z: 1.3879697}
   m_Center: {x: 0.6679521, y: 1.281606, z: -0.016890585}
+--- !u!114 &743415575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 743415572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6a40fea62c3844189e3d200bd6b2e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelInfo: {fileID: 1702599934}
 --- !u!1 &747585406
 GameObject:
   m_ObjectHideFlags: 0
@@ -31546,7 +31636,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4011853293410464, guid: b4d0dbb6181a92441888c931b4c1cef1, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4011853293410464, guid: b4d0dbb6181a92441888c931b4c1cef1, type: 2}
       propertyPath: m_LocalScale.x
@@ -36174,6 +36264,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2910547, y: 2.6009178, z: 1}
   m_Center: {x: 0.6475181, y: 1.2659432, z: 0.0000020134023}
+--- !u!114 &1580641247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1580641244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6a40fea62c3844189e3d200bd6b2e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelInfo: {fileID: 1702599934}
 --- !u!1 &1581673551
 GameObject:
   m_ObjectHideFlags: 0
