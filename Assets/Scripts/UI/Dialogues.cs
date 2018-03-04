@@ -40,7 +40,7 @@ public static class Dialogues {
                 new Rep { reponse = "... Non ça va pas, faut que je parte d'ici. T'aurais pas un contact pour m'aider ?", interacSuiv = 2, soupcon = 0 }
                 }
             },
-            new Interaction { id = 2, interaction = "Ouais ouais je connais quelqu’un. Ya Marco qui traîne souvent dans la salle commune… Va le voir, il connaît bien cet étage. Mais fait gaffe d’être poli si tu veux des réponses, il aime pas être contrarié ce gars là.", reponseListe = null }
+            new Interaction { id = 2, interaction = "Ouais ouais je connais quelqu’un. Ya Marco qui traîne souvent dans la salle commune… Va le voir, il connaît bien cet étage. Mais fait gaffe d’être poli si tu veux des réponses, il aime pas être contrarié ce gars là. Pour y aller, prend à gauche puis ce sera une grande porte à droite.", reponseListe = null }
         } } },
 
         //Conversation (niveau 0, pnj 2, personalité 1)
@@ -69,9 +69,9 @@ public static class Dialogues {
                 new Rep { reponse = "Faut que j'mévade !", interacSuiv = 7, soupcon = 0 }
                 }
             },
-            new Interaction { id = 5, interaction = "J’connais l’asile comme ma poche mon pote. Si tu veux t’évader, commence par rentrer dans la salle de pause des médecins, ils ont des clés qui donnent accès à pas mal d’endroits. Mais attention, ils ne font pas confiance à tout le monde... ", reponseListe = null },
-            new Interaction { id = 6, interaction = "T’as de la chance, je connais bien l’asile. Va voir dans le coin de pause des médecins, ils peuvent t’ouvrir pas mal de portes par ici.", reponseListe = null },
-            new Interaction { id = 7, interaction = "Regarde dans les salles de ce couloir, j’entends que les médecins sont en pause. Et reviens surtout pas me voir.", reponseListe = null }
+            new Interaction { id = 5, interaction = "J’connais l’asile comme ma poche mon pote. Si tu veux t’évader, commence par rentrer dans la salle de pause des médecins en face, ils ont des clés qui donnent accès à pas mal d’endroits. Mais attention, ils ne font pas confiance à tout le monde... ", reponseListe = null },
+            new Interaction { id = 6, interaction = "T’as de la chance, je connais bien l’asile. Va voir dans le coin de pause des médecins en face, ils peuvent t’ouvrir pas mal de portes par ici.", reponseListe = null },
+            new Interaction { id = 7, interaction = "Regarde dans la salle en face, j’entends que les médecins sont en pause. Et reviens surtout pas me voir.", reponseListe = null }
         } } },
 
         //Conversation (niveau 0, pnj 3, personalité 2)
@@ -83,8 +83,8 @@ public static class Dialogues {
                 }
             },
             new Interaction { id = 2, interaction = "Quoi ?! Ce genre de comportement est intolérable ! Prenez les clés sur la table et allez voir les gardiens dans leur bureau au bout du couloir pour leur en faire part.", reponseListe = null },
-            new Interaction { id = 3, interaction = "Haha, tu es bien malin ! Je crois que la porte est ouverte, tu peux aller voir.", reponseListe = null },
-            new Interaction { id = 4, interaction = "... D'accord. Parles-en aux gardes peut-être...", reponseListe = null },
+            new Interaction { id = 3, interaction = "Haha, tu es bien malin ! Je crois que la porte est ouverte, tu peux aller voir au bout du couloir.", reponseListe = null },
+            new Interaction { id = 4, interaction = "... D'accord. Parles-en aux gardes au bout du couloir peut-être...", reponseListe = null },
         } } },
 
 
