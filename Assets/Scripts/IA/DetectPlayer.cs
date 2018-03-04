@@ -61,7 +61,7 @@ public class DetectPlayer : MonoBehaviour {
             {
                 if (hit.transform.tag == "Player" && (hit.transform.gameObject.GetComponent<PlayerController>().getCurrentCharacter() !=3) )
                 {
-                    Debug.LogError("Detecte");
+                   // Debug.LogError("Detecte");
                     script_ia.ChasePlayer(other.gameObject);
                 }
             }

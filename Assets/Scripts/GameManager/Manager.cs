@@ -2,13 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Manager : MonoBehaviour {
 
     public GameObject end_text;
     public GameObject player;
-	// Use this for initialization
-	void Start () {
+    int notepadToGet;
+    public GameObject finalDoor;
+    public GameObject panelInfo;
+    // Use this for initialization
+
+
+    private void Awake()
+    {
+        notepadToGet = 3;
+    }
+
+    void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
     }
 	
@@ -23,6 +34,11 @@ public class Manager : MonoBehaviour {
         StartCoroutine(waitBeforeGoToMenu());
     }
 
+
+    public void GoToNextLevel(int level)
+    {
+        SceneManager.LoadScene(level, LoadSceneMode.Single);
+    }
     IEnumerator waitBeforeGoToMenu()
     {
         yield return new WaitForSeconds(6);
@@ -35,5 +51,17 @@ public class Manager : MonoBehaviour {
         player.GetComponent<PlayerController>().talking = true;
         player.GetComponent<CameraFPS>().talking = true;
         DialogueManager.getChildGameObject(player, "Main Camera").GetComponent<CameraFPS>().talking = true;
+    }
+
+    public void removeNotePad()
+    {
+        notepadToGet -= 1;
+        if(notepadToGet == 0)
+        {
+            //Debug.LogError("Je passe ce tuto de merde");
+            panelInfo.SetActive(true);
+            panelInfo.GetComponentInChildren<Text>().text = "Dirigez vous vers la porte d'escalier !";
+            finalDoor.AddComponent<TutoFinished>();
+        }
     }
 }

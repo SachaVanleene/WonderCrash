@@ -14,6 +14,8 @@ public class InteractionPerso : MonoBehaviour {
     bool active;
     InteractionInfo script_info;
 
+    GameObject gameManager;
+
 
     // Use this for initialization
     void Start() {
@@ -21,6 +23,7 @@ public class InteractionPerso : MonoBehaviour {
         pm = canvas.GetComponent<PersonalityManager>();
         pc = player.GetComponent<PlayerController>();
         script_info = GetComponent<InteractionInfo>();
+        gameManager = GameObject.FindGameObjectWithTag("GameManager");
         active = false;
     }
 
@@ -39,6 +42,7 @@ public class InteractionPerso : MonoBehaviour {
             script_info.panelInfo.SetActive(false);
             Unpause();
             panel.SetActive(false);
+            gameManager.GetComponent<Manager>().removeNotePad();
             Destroy(gameObject);
         }
     }

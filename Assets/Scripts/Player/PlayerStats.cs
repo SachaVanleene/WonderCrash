@@ -6,16 +6,20 @@ public class PlayerStats : MonoBehaviour {
 
     private bool spotted;
     private bool crazy;
-    public float maxChange = 8;
+    public float maxChange;
     private float currentChange;
-    GameObject gameManager;
+    public float maxSoupconLevel;
+    private float currentSoupcon;
 
+    GameObject gameManager;
 
     // Use this for initialization
     void Start () {
         spotted = false;
         crazy = false;
         currentChange = 0;
+        currentSoupcon = 0;
+
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
     }
 	
@@ -39,14 +43,32 @@ public class PlayerStats : MonoBehaviour {
         return crazy;
     }
 
-    public void incrCraziness(int incr)
+    public void incrCraziness(float incr)
     {
         if (!isCrazy()) currentChange += incr;
     }
 
+    public void incrSoupcon(float incr)
+    {
+        if (!spotted)
+        {
+            currentSoupcon += incr;
+            if (currentSoupcon >= maxSoupconLevel)
+            {
+                setSpotted(true);
+            }
+        }
+    }
+
+
     public float getCurrentChange()
     {
         return currentChange;
+    }
+
+    public float getCurrentSoupcon()
+    {
+        return currentSoupcon;
     }
 
 	// Update is called once per frame

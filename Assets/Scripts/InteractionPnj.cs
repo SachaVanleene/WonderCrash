@@ -31,7 +31,7 @@ public class InteractionPnj : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && hasTalked[pc.getCurrentCharacter() - 1] == false)
         {
             panelInfo.SetActive(true);
             panelInfo.GetComponentInChildren<Text>().text = "appuyer sur E pour interagir";
