@@ -1712,7 +1712,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1538359851281360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 436.65802, y: 45.9, z: -204.49435}
+  m_LocalPosition: {x: -99, y: 45.9, z: 4}
   m_LocalScale: {x: -28.415802, y: 1, z: 28.201002}
   m_Children:
   - {fileID: 4445714716996762}
@@ -1955,7 +1955,7 @@ Transform:
   m_GameObject: {fileID: 1689210718152114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.066, y: 0, z: 0.373}
-  m_LocalScale: {x: 1.7536601, y: 0.99999994, z: 1.6378955}
+  m_LocalScale: {x: 3, y: 0.99999994, z: 1.6378955}
   m_Children: []
   m_Father: {fileID: 4727354431633182}
   m_RootOrder: 29
@@ -5145,6 +5145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
   mapCamera: {fileID: 20169497292768792}
+  UI: {fileID: 0}
 --- !u!124 &124775388701980600
 Behaviour:
   m_ObjectHideFlags: 1
