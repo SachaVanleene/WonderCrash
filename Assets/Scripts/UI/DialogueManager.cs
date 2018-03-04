@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour {
     private Interaction m_qCourante, m_qSuivante;
     private List<Interaction> qList;
     private List<Rep> reponsesQuestion;
+    private PlayerStats ps;
 
     private GameObject player;
 
@@ -28,6 +29,7 @@ public class DialogueManager : MonoBehaviour {
     public void Start() {
         Time.timeScale = 1;
         player = GameObject.FindGameObjectWithTag("Player");
+        ps = player.GetComponent<PlayerStats>();
         //qList = GetDialogue(0, 2, 1);
 
         ////if(player.transform.position < certaineDistance && mouseClick && !hasSpokento)
@@ -48,6 +50,8 @@ public class DialogueManager : MonoBehaviour {
     public void GetAnswerPressed(int idReponse)
     {
         int idQSuivante = reponsesQuestion[idReponse].interacSuiv;
+        int soupcon = reponsesQuestion[idReponse].soupcon;
+        ps.incrSoupcon((float) soupcon);
 
         foreach (Interaction q in qList)
         {

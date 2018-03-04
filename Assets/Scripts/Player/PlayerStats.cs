@@ -6,8 +6,10 @@ public class PlayerStats : MonoBehaviour {
 
     private bool spotted;
     private bool crazy;
-    public float maxChange = 8;
+    public float maxChange;
     private float currentChange;
+    public float maxSoupconLevel;
+    private float currentSoupcon;
 
 
     // Use this for initialization
@@ -15,6 +17,7 @@ public class PlayerStats : MonoBehaviour {
         spotted = false;
         crazy = false;
         currentChange = 0;
+        currentSoupcon = 0;
     }
 	
 
@@ -33,14 +36,25 @@ public class PlayerStats : MonoBehaviour {
         return crazy;
     }
 
-    public void incrCraziness(int incr)
+    public void incrCraziness(float incr)
     {
         if (!isCrazy()) currentChange += incr;
     }
 
+    public void incrSoupcon(float incr)
+    {
+        if (!spotted) currentSoupcon += incr;
+    }
+
+
     public float getCurrentChange()
     {
         return currentChange;
+    }
+
+    public float getCurrentSoupcon()
+    {
+        return currentSoupcon;
     }
 
 	// Update is called once per frame
@@ -51,6 +65,10 @@ public class PlayerStats : MonoBehaviour {
             crazy = true;
             PlayerController script = GetComponent<PlayerController>();
             StartCoroutine(script.RandomChange());
+        }
+        if(currentSoupcon >= maxSoupconLevel && !spotted)
+        {
+            spotted = true;
         }
 
 	}
