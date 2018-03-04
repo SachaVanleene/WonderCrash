@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DoorPivoter : MonoBehaviour {
 
-    public float speed = 1.0f;
-    public float pivotAngle = 60f;
+    public float speed = 2.0f;
+    public float pivotAngle = 80f;
 
     private bool isOpened = false;
     private bool isOpening = false;
