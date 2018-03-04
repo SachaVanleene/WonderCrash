@@ -30,6 +30,8 @@ public class IAGuard : MonoBehaviour {
 
     AudioSource alert_sound;
 
+    GameObject gameManager;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -38,7 +40,7 @@ public class IAGuard : MonoBehaviour {
         movingToPlayer = false;
         isMovingToDestnation = false;
         timeSinceNotSeenPlayer = 0f;
-        timeNeededToEscape = 1f;
+        timeNeededToEscape = 2f;
         player = GameObject.FindGameObjectWithTag("Player");
         dest = GameObject.FindGameObjectsWithTag("RoamingDestination");
         //Destination = new List<GameObject>(dest);
@@ -49,6 +51,7 @@ public class IAGuard : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        gameManager = GameObject.FindGameObjectWithTag("GameManager");
         currentDestination = GetNextDestination();
         playerTransform = player.transform;
         alert_sound = GetComponent<AudioSource>();
@@ -143,18 +146,11 @@ public class IAGuard : MonoBehaviour {
 
     public void IncreaseDetectionValue()
     {
-        detectionBar.value += 0.001f;
-        /* Vector3 agentVector = new Vector3(transform.position.x, 0f, transform.position.z);
-         Vector3 targetVector = new Vector3(currentDestination.position.x, 0f, currentDestination.position.z);
-         float distance = Vector3.Distance(agentVector,targetVector);
-         if(detectionBar.value + (1f-distance)> 1)
-         {
-             detectionBar.value = 1;
-         }
-         else
-         {
-             detectionBar.value += (1f - (distance);
-         }*/
+        detectionBar.value += 0.002f;
+        if(detectionBar.value == 1 && !player.GetComponent<PlayerStats>().getSpotted())
+        {
+            player.GetComponent<PlayerStats>().setSpotted(true);           
+        }
     }
 
     private void OnTriggerEnter(Collider other)

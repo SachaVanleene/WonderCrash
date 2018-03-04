@@ -8,6 +8,7 @@ public class PlayerStats : MonoBehaviour {
     private bool crazy;
     public float maxChange = 8;
     private float currentChange;
+    GameObject gameManager;
 
 
     // Use this for initialization
@@ -15,6 +16,7 @@ public class PlayerStats : MonoBehaviour {
         spotted = false;
         crazy = false;
         currentChange = 0;
+        gameManager = GameObject.FindGameObjectWithTag("GameManager");
     }
 	
 
@@ -26,6 +28,10 @@ public class PlayerStats : MonoBehaviour {
     public void setSpotted(bool spot)
     {
         spotted = spot;
+        if (spotted)
+        {
+            gameManager.GetComponent<Manager>().SpottedEnd();
+        }
     }
 
     public bool isCrazy()
