@@ -41,23 +41,31 @@ public class InteractionPnj : MonoBehaviour
         }
 
     }
-    void OnTriggerStay()
+    void OnTriggerStay(Collider other)
     {
+        if (other.gameObject.tag == "Player" && hasTalked[pc.getCurrentCharacter() - 1] == false)
+        {
+            panelInfo.SetActive(true);
+            panelInfo.GetComponentInChildren<Text>().text = "E pour interagir";
+        }
+        if (other.gameObject.tag == "Player" && hasTalked[pc.getCurrentCharacter() - 1] == true)
+        {
+            panelInfo.SetActive(false);
+            panelInfo.GetComponentInChildren<Text>().text = "E pour interagir";
+        }
         if (Input.GetKeyDown(KeyCode.E) && hasTalked[pc.getCurrentCharacter()-1] == false)
         {
             panel.SetActive(true);
             int currentCharacter = pc.getCurrentCharacter();
+            Debug.LogError(currentScene.buildIndex - 1);
             qList = dm.GetDialogue(currentScene.buildIndex - 1, id, currentCharacter);
 
             qCourante = qList[0];
             dm.setButtonQuestion(qCourante.interaction);
             reponsesQuestion = qCourante.reponseListe;
             dm.AfficheDialogue(qCourante, qList);
-
-            for (int i = 0; i < 3; i++)
-            {
                 hasTalked[pc.getCurrentCharacter()-1] = true;
-            }
+            panelInfo.SetActive(false);
         }
     }
 
