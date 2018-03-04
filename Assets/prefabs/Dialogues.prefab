@@ -782,13 +782,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Bienvenue dans l\u2019asile \xAB Mad Hatter \xBB\r\n\nVous \xEAtes sur
-    le point d\u2019incarner Ernest, patient aux multiples personnalit\xE9s. Votre
-    but : vous \xE9vader !\r\n\nMais \xE7a ne sera pas t\xE2che facile carles gardes
-    sont \xE0 votre poursuite. Fort heureusement votre d\xE9sordre mental sera la
-    cl\xE9 de votre \xE9vasion. Mais attention \xE0 ne pas en abuser, cela pourrait
-    \xE9galement causer votre perte...\r\n\nCommencer par prendre le carnet bleu pour
-    d\xE9couvrir votre personnalit\xE9.\n"
+  m_Text: text
 --- !u!114 &114022346639352104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3600,8 +3594,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 208.24994, y: -46.68}
-  m_SizeDelta: {x: 416.5, y: 264.51}
+  m_AnchoredPosition: {x: 238.4, y: 0.000002861}
+  m_SizeDelta: {x: 476.8, y: 334.4}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!224 &224563492447293418
 RectTransform:
@@ -3654,8 +3648,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.1000061, y: 0.0000019073}
-  m_SizeDelta: {x: 315.6, y: 202.3}
+  m_AnchoredPosition: {x: 0, y: 15.799999}
+  m_SizeDelta: {x: 387.25, y: 246.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224590631658477394
 RectTransform:
