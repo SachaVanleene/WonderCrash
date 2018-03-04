@@ -67,6 +67,9 @@ public class PlayerController : MonoBehaviour
         {
             Move(h, v);
 
+        } else {
+            movment = (h * transform.right + v * transform.forward).normalized;
+            rb.velocity = movment * 0f;
         }
         //Audio Management 
         if (Mathf.Abs(h + v) > 0)

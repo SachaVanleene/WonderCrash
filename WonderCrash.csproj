@@ -335,6 +335,7 @@
     <Compile Include="Assets\Environment\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
     <Compile Include="Assets\Scripts\CameraSwitch.cs" />
     <Compile Include="Assets\Scripts\DoorOpening\DoorPivoter.cs" />
+    <Compile Include="Assets\Scripts\GameManager\Level1Finished.cs" />
     <Compile Include="Assets\Scripts\GameManager\Manager.cs" />
     <Compile Include="Assets\Scripts\GameManager\TutoFinished.cs" />
     <Compile Include="Assets\Scripts\IA\DetectPlayer.cs" />

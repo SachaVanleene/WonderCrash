@@ -1796,8 +1796,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1693919643809670}
-  m_LocalRotation: {x: -0, y: 0.43588766, z: -0, w: 0.90000117}
-  m_LocalPosition: {x: -87.24204, y: -5.3185005, z: -71.6192}
+  m_LocalRotation: {x: -0, y: -0.9990233, z: -0, w: 0.044185843}
+  m_LocalPosition: {x: 442.1, y: -2.0619078e-17, z: -183.2}
   m_LocalScale: {x: 0.050000012, y: 0.05, z: 0.050000012}
   m_Children:
   - {fileID: 4614007315538622}
@@ -1809,7 +1809,7 @@ Transform:
   - {fileID: 4649654523051978}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 51.684002, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -174.93501, z: 0}
 --- !u!4 &4639779047323540
 Transform:
   m_ObjectHideFlags: 1
@@ -2205,7 +2205,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875eaed129212fb4788ac4aec9cdb77a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 3
+  id: 4
+  door: {fileID: 0}
   panel: {fileID: 0}
   canvasDialogue: {fileID: 0}
   panelInfo: {fileID: 0}

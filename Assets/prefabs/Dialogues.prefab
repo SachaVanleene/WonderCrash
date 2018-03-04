@@ -1119,6 +1119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paneltuto: {fileID: 1217686600313526}
+  tutoText: {fileID: 114005572122351922}
 --- !u!114 &114154951479185106
 MonoBehaviour:
   m_ObjectHideFlags: 1
