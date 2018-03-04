@@ -15,7 +15,6 @@ public class DoorOpener : MonoBehaviour {
     {
         if(other.gameObject.CompareTag("Door"))
         {
-            Debug.Log(other.gameObject.name);
             neighbourDoor = other.gameObject.GetComponent<DoorPivoter>();
         }
     }
