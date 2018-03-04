@@ -9,7 +9,7 @@ public class DetectPlayer : MonoBehaviour {
     public GameObject guard;
     bool playerChangedPersonallity;
     float timeToDetechChangement;
-    public GameObject player;
+    private GameObject player;
     PlayerController script_player;
 
 
@@ -22,6 +22,7 @@ public class DetectPlayer : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        player = GameObject.FindGameObjectWithTag("Player");
         script_ia = guard.GetComponent<IAGuard>();
         script_player = player.GetComponent<PlayerController>();
         script_player.addGuard(PersonallityChanged);

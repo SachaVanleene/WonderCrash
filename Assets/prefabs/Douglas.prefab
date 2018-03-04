@@ -985,7 +985,7 @@ GameObject:
   - component: {fileID: 23398927558945636}
   - component: {fileID: 64929318834776708}
   - component: {fileID: 114103057814425434}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Cone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2519,7 +2519,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guard: {fileID: 1193915136396280}
-  player: {fileID: 0}
 --- !u!114 &114116577455700992
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2582,12 +2581,8 @@ MonoBehaviour:
   detectionBar: {fileID: 114044783402028448}
   maskLayer:
     serializedVersion: 2
-    m_Bits: 2816
-  player: {fileID: 0}
+    m_Bits: 768
   cone: {fileID: 1781987070271286}
-  Destination:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &114898856249294004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2599,7 +2594,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b97cebc6750429341bbb1f348b4eb4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Camera: {fileID: 0}
 --- !u!136 &136246997689033708
 CapsuleCollider:
   m_ObjectHideFlags: 1

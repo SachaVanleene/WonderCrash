@@ -8,6 +8,10 @@ TagManager:
   - Icon3
   - Icon1
   - Icon0
+  - Obtsacle
+  - Obstacle
+  - Interaction1
+  - RoamingDestination
   layers:
   - Default
   - TransparentFX
@@ -18,9 +22,9 @@ TagManager:
   - 
   - 
   - Player
-  - 
-  - 
-  - 
+  - Obstacle
+  - Guard
+  - ConeDetection
   - 
   - 
   - 

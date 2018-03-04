@@ -11,6 +11,7 @@ public class InteractionPerso : MonoBehaviour {
     private PersonalityManager pm;
     private PlayerController pc;
     private int minDist = 10;
+    bool active;
 
 
     // Use this for initialization
@@ -18,6 +19,7 @@ public class InteractionPerso : MonoBehaviour {
         player = GameObject.FindWithTag("Player");
         pm = canvas.GetComponent<PersonalityManager>();
         pc = player.GetComponent<PlayerController>();
+        active = false;
     }
 
     // Update is called once per frame
@@ -25,13 +27,32 @@ public class InteractionPerso : MonoBehaviour {
         Vector3 distToPlayer = player.transform.position - gameObject.transform.position;
 
         if (distToPlayer.magnitude < minDist && Input.GetKeyDown(KeyCode.E)) {
+            Pause();
             panel.SetActive(true);
             pm.FichePerso(id);
+            active = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Keypad1) && id == 1 || Input.GetKeyDown(KeyCode.Keypad2) && id == 2 || Input.GetKeyDown(KeyCode.Keypad3) && id == 3) {
+        if ((Input.GetKeyDown(KeyCode.Alpha1) && id == 1 || Input.GetKeyDown(KeyCode.Alpha2) && id == 2 || Input.GetKeyDown(KeyCode.Alpha3) && id == 3) && active) {
+            Unpause();
             panel.SetActive(false);
             Destroy(gameObject);
         }
+    }
+
+    void Pause()
+    {
+        Time.timeScale = 0;
+        player.GetComponent<PlayerController>().talking = true;
+        player.GetComponent<CameraFPS>().talking = true;
+        DialogueManager.getChildGameObject(player, "Main Camera").GetComponent<CameraFPS>().talking = true;
+    }
+
+    void Unpause()
+    {
+        Time.timeScale = 1;
+        player.GetComponent<PlayerController>().talking = false;
+        player.GetComponent<CameraFPS>().talking = false;
+        DialogueManager.getChildGameObject(player, "Main Camera").GetComponent<CameraFPS>().talking = false;
     }
 }

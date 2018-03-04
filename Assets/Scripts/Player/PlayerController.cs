@@ -18,7 +18,9 @@ public class PlayerController : MonoBehaviour
 
     AudioSource step;
     bool moving;
-    float movingTime; // depusi combien de temps je bouge 
+    float movingTime; // depusi combien de temps je bouge
+
+    public bool talking;
 
 
 
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         moving = false;
         movingTime = 0;
+        talking = false;
     }
 
     // Use this for initialization
@@ -54,8 +57,11 @@ public class PlayerController : MonoBehaviour
 
         float h = 0f;
         float v = 0f;
-        h = Input.GetAxisRaw("Horizontal");
-        v = Input.GetAxisRaw("Vertical");
+        if (!talking)
+        {
+            h = Input.GetAxisRaw("Horizontal");
+            v = Input.GetAxisRaw("Vertical");
+        }
         if (!stats.getSpotted())
         {
             Move(h, v);
