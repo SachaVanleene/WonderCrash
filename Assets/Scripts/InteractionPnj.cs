@@ -46,7 +46,7 @@ public class InteractionPnj : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("interaction");
+            //Debug.LogError("interaction");
             panel.SetActive(true);
             int currentCharacter = pc.getCurrentCharacter();
             qList = dm.GetDialogue(0, id, currentCharacter);
@@ -54,7 +54,6 @@ public class InteractionPnj : MonoBehaviour
             qCourante = qList[0];
             dm.setButtonQuestion(qCourante.interaction);
             reponsesQuestion = qCourante.reponseListe;
-
             dm.AfficheDialogue(qCourante, qList);
         }
     }
