@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractionPerso : MonoBehaviour {
+public class InteractionPerso : MonoBehaviour
+{
 
     public int id;
     public GameObject panel, canvas;
@@ -18,7 +19,8 @@ public class InteractionPerso : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start() {
+    void Start()
+    {
         player = GameObject.FindWithTag("Player");
         pm = canvas.GetComponent<PersonalityManager>();
         pc = player.GetComponent<PlayerController>();
@@ -28,17 +30,22 @@ public class InteractionPerso : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
         Vector3 distToPlayer = player.transform.position - gameObject.transform.position;
 
-        if (distToPlayer.magnitude < minDist && Input.GetKeyDown(KeyCode.E)) {
+        if (distToPlayer.magnitude < minDist && Input.GetKeyDown(KeyCode.E))
+        {
+            pc.enablingChange(id - 1, true);
             Pause();
             panel.SetActive(true);
             pm.FichePerso(id);
             active = true;
         }
 
-        if ((Input.GetKeyDown(KeyCode.Alpha1) && id == 1 || Input.GetKeyDown(KeyCode.Alpha2) && id == 2 || Input.GetKeyDown(KeyCode.Alpha3) && id == 3) && active) {
+        if ((Input.GetKeyDown(KeyCode.Alpha1) && id == 1 || Input.GetKeyDown(KeyCode.Alpha2) && id == 2 || Input.GetKeyDown(KeyCode.Alpha3) && id == 3) && active)
+        {
+
             script_info.panelInfo.SetActive(false);
             Unpause();
             panel.SetActive(false);

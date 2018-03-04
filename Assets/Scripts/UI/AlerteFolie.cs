@@ -13,8 +13,6 @@ public class AlerteFolie : MonoBehaviour {
 	void Start () {
         icone.gameObject.SetActive(false);
         player = player.GetComponent<PlayerStats>();
-        
-        
     }
 
     private void Update()

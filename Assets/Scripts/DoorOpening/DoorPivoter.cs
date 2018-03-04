@@ -78,7 +78,14 @@ public class DoorPivoter : MonoBehaviour {
             soundplaying = false;
             isOpened = !isOpened;
             isOpening = true;
-        }  
+        }
+        else
+        {
+            if(door_locked != null)
+            {
+                source.PlayOneShot(door_locked);
+            }            
+        }
     }
 
     public void SwitchDoor_Bis() {

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,6 +15,8 @@ public class PlayerController : MonoBehaviour
     PlayerStats stats;
     public float RandomChangePeriode = 3f;
     float elapsed = 0f;
+    bool[] enabling;
+    private UnityEngine.UI.Image iconPerso1, iconPerso2, iconPerso3;
 
     public delegate void onPersonallityChange();
     public onPersonallityChange onTriggerPersonallityChanged; //PRévenir que j'ai changé de personnalité
@@ -21,13 +25,22 @@ public class PlayerController : MonoBehaviour
     bool moving;
     float movingTime; // depusi combien de temps je bouge
 
-    public bool talking;    
+    public bool talking;
 
     private Rigidbody rb;
 
 
     private void Awake()
     {
+        iconPerso1 = GameObject.FindGameObjectWithTag("Icon0").GetComponent<UnityEngine.UI.Image>();
+        iconPerso2 = GameObject.FindGameObjectWithTag("Icon1").GetComponent<UnityEngine.UI.Image>();
+        iconPerso3 = GameObject.FindGameObjectWithTag("Icon2").GetComponent<UnityEngine.UI.Image>();
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            enabling = new bool[] { false, false, false };
+
+        }
+        else enabling = new bool[] { true, true, true };
         moving = false;
         movingTime = 0;
         talking = false;
@@ -39,31 +52,47 @@ public class PlayerController : MonoBehaviour
     {
         characters = new int[] { 1, 2, 3 };
         characterComponenet = GetComponent<Character>();
-        mainIcon = GameObject.FindGameObjectWithTag("Icon0").GetComponent<UnityEngine.UI.Image>();
+
         characterComponenet.setCharacter(characters[0]);
-        mainIcon.sprite = characterComponenet.getCurrentSprite();
-        GameObject.FindGameObjectWithTag("Icon" + 1).GetComponent<UnityEngine.UI.Image>().sprite = characterComponenet.getSpriteByCharacter(characters[1]);
-        GameObject.FindGameObjectWithTag("Icon" + 2).GetComponent<UnityEngine.UI.Image>().sprite = characterComponenet.getSpriteByCharacter(characters[2]);
+        iconPerso1.GetComponent<UnityEngine.UI.Image>().sprite = characterComponenet.getCurrentSprite();
+        iconPerso2.GetComponent<UnityEngine.UI.Image>().sprite = characterComponenet.getSpriteByCharacter(characters[1]);
+        iconPerso3.GetComponent<UnityEngine.UI.Image>().sprite = characterComponenet.getSpriteByCharacter(characters[2]);
+
+        
+        if (!enabling[0])
+        {
+            iconPerso1.GetComponent<UnityEngine.UI.Image>().color=new Color32(255,255,255,0);
+        }
+        if (!enabling[1])
+        {
+            iconPerso2.GetComponent<UnityEngine.UI.Image>().color = new Color32(255, 255, 255, 0);
+        }
+        if (!enabling[2])
+        {
+            iconPerso3.GetComponent<UnityEngine.UI.Image>().color = new Color32(255, 255, 255, 0);
+        }
+
+
         stats = GetComponent<PlayerStats>();
         step = GetComponent<AudioSource>();
     }
 
-    
+
     // Update is called once per frame
     void Update()
     {
         if (!stats.isCrazy())
         {
             elapsed += Time.deltaTime;
-
-            if (elapsed >= 0.1f) {
+            
+            if (elapsed >= 1f) { 
                 elapsed = 0;
                 
                 if (characters[0] == 2) stats.incrCraziness(1.5f);
                 else if (characters[0] == 3) stats.incrCraziness(2);
                 else if (stats.getCurrentChange() >= 2) stats.incrCraziness(-0.5f);
             }
-            
+
             changeCharacter();
         }
 
@@ -78,7 +107,9 @@ public class PlayerController : MonoBehaviour
         {
             Move(h, v);
 
-        } else {
+        }
+        else
+        {
             movment = (h * transform.right + v * transform.forward).normalized;
             rb.velocity = movment * 0f;
         }
@@ -88,17 +119,19 @@ public class PlayerController : MonoBehaviour
             movingTime += Time.deltaTime;
             if (moving)
             {
-                if(movingTime> 2.611f)
+                if (movingTime > 2.611f)
                 {
                     step.Play();
                     movingTime = 0f;
                 }
-            }else
+            }
+            else
             {
                 moving = true;
                 step.Play();
             }
-        } else
+        }
+        else
         {
             moving = false;
             movingTime = 0f;
@@ -115,8 +148,8 @@ public class PlayerController : MonoBehaviour
         movment = (h * transform.right + v * transform.forward).normalized;
         rb.velocity = movment * speed;
         //transform.Translate(movment);
-        
-        
+
+
     }
 
     int findIndexOf(int character)
@@ -142,22 +175,22 @@ public class PlayerController : MonoBehaviour
     void changeCharacter()
     {
 
-        if (Input.GetKeyDown(KeyCode.Alpha1) && characters[0] != 1)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && enabling[0] && characters[0] != 1)
         {
             getCharacter(1);
-           
+
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2) && characters[0] != 2)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && enabling[1] && characters[0] != 2)
         {
             getCharacter(2);
-           
+
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3) && characters[0] != 3)
+        if (Input.GetKeyDown(KeyCode.Alpha3) && enabling[2] && characters[0] != 3)
         {
             getCharacter(3);
 
             // Police man get the player crazy faster 
-            
+
         }
     }
 
@@ -168,15 +201,17 @@ public class PlayerController : MonoBehaviour
         characters[findIndexOf(character)] = lastCharacter;
         characters[0] = character;
         characterComponenet.setCharacter(character);
-        mainIcon.sprite = characterComponenet.getCurrentSprite();
+        iconPerso1.sprite = characterComponenet.getCurrentSprite();
         GameObject.FindGameObjectWithTag("Icon" + index).GetComponent<UnityEngine.UI.Image>().sprite = characterComponenet.getSpriteByCharacter(lastCharacter);
         onTriggerPersonallityChanged.Invoke();
     }
 
-    public IEnumerator RandomChange() {
+    public IEnumerator RandomChange()
+    {
         yield return new WaitForSeconds(RandomChangePeriode);
         int character = Random.Range(1, 4);
-        while (character == characters[0]) {
+        while (character == characters[0])
+        {
             character = Random.Range(1, 3);
         }
         getCharacter(character);
@@ -188,5 +223,17 @@ public class PlayerController : MonoBehaviour
     public void addGuard(PlayerController.onPersonallityChange function)
     {
         onTriggerPersonallityChanged += function;
+    }
+
+    public void enablingChange(int id, bool _enabling)
+    {
+        enabling[id] = _enabling;
+
+        if (_enabling)
+        {
+            if (id == 0) iconPerso1.GetComponent<UnityEngine.UI.Image>().color = new Color32(255, 255, 255, 110);
+            if (id == 1) iconPerso2.GetComponent<UnityEngine.UI.Image>().color = new Color32(255, 255, 255, 110);
+            if (id == 2) iconPerso3.GetComponent<UnityEngine.UI.Image>().color = new Color32(255, 255, 255, 110);
+        }
     }
 }
