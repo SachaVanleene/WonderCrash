@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InteractionPnj : MonoBehaviour
 {
-
     public int id;
     public GameObject door;
     private bool[] hasTalked = new bool[] { false,false,false };
@@ -20,6 +20,7 @@ public class InteractionPnj : MonoBehaviour
 
     private DialogueManager dm;
     private PlayerController pc;
+    private Scene currentScene;
 
     // Use this for initialization
     void Start()
@@ -27,6 +28,7 @@ public class InteractionPnj : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         dm = canvasDialogue.GetComponent<DialogueManager>();
         pc = player.GetComponent<PlayerController>();
+        currentScene = SceneManager.GetActiveScene();
     }
 
 
@@ -45,7 +47,7 @@ public class InteractionPnj : MonoBehaviour
         {
             panel.SetActive(true);
             int currentCharacter = pc.getCurrentCharacter();
-            qList = dm.GetDialogue(0, id, currentCharacter);
+            qList = dm.GetDialogue(currentScene.buildIndex - 1, id, currentCharacter);
 
             qCourante = qList[0];
             dm.setButtonQuestion(qCourante.interaction);
@@ -66,8 +68,11 @@ public class InteractionPnj : MonoBehaviour
             panelInfo.SetActive(false);
             panelInfo.GetComponentInChildren<Text>().text = "";
 
+            print(dm.GetProgress());
+
             if (dm.GetProgress() == "OK")
             {
+                print("yolo");
                 door.GetComponent<DoorPivoter>().SwitchDoor();
             }
         }
