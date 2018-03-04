@@ -56,14 +56,12 @@ public class PlayerController : MonoBehaviour
         {
             elapsed += Time.deltaTime;
 
-            if (elapsed >= 1f) {
+            if (elapsed >= 0.1f) {
                 elapsed = 0;
-
-                Debug.Log("change : " + stats.getCurrentChange() + "id : " + characters[0]);
-                if (characters[0] == 2) stats.incrCraziness(15);
-                else if (characters[0] == 3) stats.incrCraziness(20);
-                else if (stats.getCurrentChange() >= 2) stats.incrCraziness(-2);
-                Debug.Log("change : " + stats.getCurrentChange() + "id : " + characters[0]);
+                
+                if (characters[0] == 2) stats.incrCraziness(1.5f);
+                else if (characters[0] == 3) stats.incrCraziness(2);
+                else if (stats.getCurrentChange() >= 2) stats.incrCraziness(-0.5f);
             }
             
             changeCharacter();

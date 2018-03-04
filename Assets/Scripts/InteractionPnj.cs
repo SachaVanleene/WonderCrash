@@ -57,14 +57,13 @@ public class InteractionPnj : MonoBehaviour
         {
             panel.SetActive(true);
             int currentCharacter = pc.getCurrentCharacter();
-            Debug.LogError(currentScene.buildIndex - 1);
             qList = dm.GetDialogue(currentScene.buildIndex - 1, id, currentCharacter);
 
             qCourante = qList[0];
             dm.setButtonQuestion(qCourante.interaction);
             reponsesQuestion = qCourante.reponseListe;
             dm.AfficheDialogue(qCourante, qList);
-                hasTalked[pc.getCurrentCharacter()-1] = true;
+            hasTalked[pc.getCurrentCharacter()-1] = true;
             panelInfo.SetActive(false);
         }
     }
