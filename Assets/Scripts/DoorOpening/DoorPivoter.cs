@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class DoorPivoter : MonoBehaviour {
 
-    public float speed = 1.0f;
-    public float pivotAngle = 60f;
+
+    public float speed = 2.0f;
+    public float pivotAngle = 80f;
+
     public AudioClip door_open;
     public AudioClip door_close;
     public AudioClip door_locked;
 
     private bool isOpened = true;
     private bool isOpening = false;
+    public bool isLocked = false;
     private float openAngle;
     private float closedAngle;
     private float currentAngle;
     private AudioSource source;
     private bool soundplaying;
+
     private void Start()
     {
         closedAngle = transform.eulerAngles.y;
@@ -70,17 +74,16 @@ public class DoorPivoter : MonoBehaviour {
 
     public void SwitchDoor()
     {
-        if (this.gameObject.tag != "Door_locked"){
+        if (!isLocked){
             soundplaying = false;
             isOpened = !isOpened;
             isOpening = true;
         }  
     }
-    public void DoorLock(bool locked)
+
+    public void Unlock()
     {
-        if(locked != true)
-        {
-            SwitchDoor();
-        }
+        isLocked = false;
     }
+
 }
