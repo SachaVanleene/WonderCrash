@@ -18,7 +18,6 @@ public class DialogueManager : MonoBehaviour {
 
 
     public List<Interaction> GetDialogue(int niveau, int pnj, int personnalite) {
-
         string idDico = niveau.ToString() + "." + pnj.ToString() + "." + personnalite.ToString();
         Conv conv = Dialogues.GetConv(idDico);
         List<Interaction> qList = conv.interactionListe;
@@ -71,9 +70,11 @@ public class DialogueManager : MonoBehaviour {
         int i = 0;
         if (reponsesQuestion != null)
         {
-
+            endConv.gameObject.SetActive(false);
+            Debug.LogError("Y a des reponses");
             foreach (Rep rep in reponsesQuestion)
             {
+                reponses[i].gameObject.SetActive(true);
                 reponses[i].GetComponentInChildren<Text>().text = rep.reponse;
                 i++;
             }
