@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1540,7 +1540,7 @@ Prefab:
     - target: {fileID: 224703267139771038, guid: 536ce625bcb6a8a448bdf1a57e2d5251,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114898856249294004, guid: 536ce625bcb6a8a448bdf1a57e2d5251,
         type: 2}
@@ -10742,7 +10742,7 @@ Prefab:
     - target: {fileID: 224703267139771038, guid: 536ce625bcb6a8a448bdf1a57e2d5251,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 536ce625bcb6a8a448bdf1a57e2d5251, type: 2}
@@ -33378,7 +33378,7 @@ GameObject:
   - component: {fileID: 1334411803}
   - component: {fileID: 1334411804}
   - component: {fileID: 1334411805}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Door_hero
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -39897,7 +39897,7 @@ Prefab:
       objectReference: {fileID: 624613112}
     - target: {fileID: 1538359851281360, guid: 1a58977964530244bb3be2208bee0a46, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a58977964530244bb3be2208bee0a46, type: 2}

@@ -32,6 +32,13 @@ public class IAGuard : MonoBehaviour {
 
     GameObject gameManager;
 
+    float speedInit;
+    float speedCoeff;
+
+    float speedDetectionIncreaseCoeff;
+
+
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -43,6 +50,8 @@ public class IAGuard : MonoBehaviour {
         timeNeededToEscape = 2f;
         player = GameObject.FindGameObjectWithTag("Player");
         dest = GameObject.FindGameObjectsWithTag("RoamingDestination");
+        speedCoeff = 35;
+        speedDetectionIncreaseCoeff = 0.002f;
         //Destination = new List<GameObject>(dest);
     }
 
@@ -55,6 +64,7 @@ public class IAGuard : MonoBehaviour {
         currentDestination = GetNextDestination();
         playerTransform = player.transform;
         alert_sound = GetComponent<AudioSource>();
+        speedInit = agent.speed;
     }
 
 
@@ -118,7 +128,10 @@ public class IAGuard : MonoBehaviour {
                     if (hit.transform.tag == "Player")
                     {
                         //Debug.LogError("Joueur");
-                        IncreaseDetectionValue();
+                        if(detectionBar.value < 1)
+                        {
+                            IncreaseDetectionValue();
+                        }
                         timeSinceNotSeenPlayer = 0f;
                     }
                     if (hit.transform.gameObject.layer == 9)
@@ -135,7 +148,8 @@ public class IAGuard : MonoBehaviour {
         }
         if(!movingToPlayer && detectionBar.value > 0) //Diminuer la detection
         {
-            detectionBar.value -= 0.01f;
+            detectionBar.value -= speedDetectionIncreaseCoeff;
+            agent.speed -= speedCoeff * speedDetectionIncreaseCoeff;
             if (detectionBar.value < 0)
             {
                 detectionBar.value = 0;
@@ -144,10 +158,18 @@ public class IAGuard : MonoBehaviour {
 
     }
 
+
     public void IncreaseDetectionValue()
     {
-        detectionBar.value += 0.002f;
-        if(detectionBar.value == 1 && !player.GetComponent<PlayerStats>().getSpotted())
+        detectionBar.value += speedDetectionIncreaseCoeff;
+        if(detectionBar.value + speedDetectionIncreaseCoeff <= 1)
+        {
+            agent.speed += speedCoeff * speedDetectionIncreaseCoeff;
+        }else
+        {
+            agent.speed += speedCoeff * (1- (detectionBar.value +speedDetectionIncreaseCoeff));
+        }
+        if(detectionBar.value >= 1 && !player.GetComponent<PlayerStats>().getSpotted())
         {
             player.GetComponent<PlayerStats>().setSpotted(true);           
         }
