@@ -23,15 +23,14 @@ public class AfficheTuto : MonoBehaviour {
         else if (currentScene.buildIndex == 2) {
             tutoText.text = "lvl1";
         }
-
-        Pause();
         paneltuto.SetActive(true);
-	}
+        Pause();
+    }
 	
 	
     public void closePanel() {
-        Unpause();
         paneltuto.SetActive(false);
+        Unpause();
     }
 
 

@@ -84,7 +84,6 @@ GameObject:
   - component: {fileID: 114477073920095852}
   - component: {fileID: 111451906353676598}
   - component: {fileID: 65852406573815748}
-  - component: {fileID: 114803427164518146}
   m_Layer: 0
   m_Name: Patient
   m_TagString: Untagged
@@ -1447,8 +1446,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1090352525370562}
-  m_LocalRotation: {x: -0, y: 0.70710635, z: -0, w: 0.7071072}
-  m_LocalPosition: {x: 15.157959, y: -7.458501, z: 27.380802}
+  m_LocalRotation: {x: -0, y: 0.7071093, z: -0, w: -0.7071043}
+  m_LocalPosition: {x: 367.7, y: 0, z: -104.8}
   m_LocalScale: {x: 0.049999986, y: 0.05, z: 0.049999986}
   m_Children:
   - {fileID: 4690378498683414}
@@ -1461,7 +1460,7 @@ Transform:
   - {fileID: 4485945288964338}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!4 &4416419811203720
 Transform:
   m_ObjectHideFlags: 1
@@ -2264,22 +2263,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875eaed129212fb4788ac4aec9cdb77a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 2
-  panel: {fileID: 0}
-  canvasDialogue: {fileID: 0}
-  panelInfo: {fileID: 0}
---- !u!114 &114803427164518146
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1090352525370562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 875eaed129212fb4788ac4aec9cdb77a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 1
+  id: 3
+  door: {fileID: 0}
   panel: {fileID: 0}
   canvasDialogue: {fileID: 0}
   panelInfo: {fileID: 0}
