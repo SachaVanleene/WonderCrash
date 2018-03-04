@@ -6,16 +6,11 @@ public class DoorOpener : MonoBehaviour {
 
     private DoorPivoter neighbourDoor = null;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Door"))
         {
-            Debug.Log(other.gameObject.name);
             neighbourDoor = other.gameObject.GetComponent<DoorPivoter>();
         }
     }
