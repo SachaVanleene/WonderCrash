@@ -71,7 +71,7 @@ public class DialogueManager : MonoBehaviour {
         if (reponsesQuestion != null)
         {
             endConv.gameObject.SetActive(false);
-            Debug.LogError("Y a des reponses");
+            //Debug.LogError("Y a des reponses");
             foreach (Rep rep in reponsesQuestion)
             {
                 reponses[i].gameObject.SetActive(true);
