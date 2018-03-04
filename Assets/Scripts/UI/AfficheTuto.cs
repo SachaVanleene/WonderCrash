@@ -21,7 +21,7 @@ public class AfficheTuto : MonoBehaviour {
             tutoText.text = "Bienvenue dans l’asile ' Mad Hatter ' \n\n Vous êtes sur le point d’incarner Ernest, patient aux multiples personnalités. Votre but : vous évader ! Mais ça ne sera pas tâche facile carles gardes sont à votre poursuite. \n\n Fort heureusement votre désordre mental sera la clé de votre évasion. Mais attention à ne pas en abuser, cela pourrait également causer votre perte... \n\n Commencer par prendre le carnet bleu pour découvrir votre personnalité.";
         }
         else if (currentScene.buildIndex == 2) {
-            tutoText.text = "lvl1";
+            tutoText.text = "Vous vous êtes échappé jusqu’à l’étage suivant de l’asile mais les gardes vous pourchassent toujours! Essayer de trouver l’escalier de l’étage suivant pour continuer votre évasion. \n\n Les personnes que vous croiserez essayeront de vous empêcher de continuer mais vous pouvez dialoguer avec eux pour leur convaincre. Attention, ils ne réagissent pas de la même façon en fonction de votre personnalité(une chance avec chaque) : il faut changer de personnalité stratégiquement selon vos besoins. \n\n Vos réponses provoque plus ou moins de soupcons chez votre entourage et trop de changement de personnalité provoque une crise de folie… \n\n Bonne chance!";
         }
         paneltuto.SetActive(true);
         Pause();
