@@ -12,6 +12,7 @@ public class InteractionPerso : MonoBehaviour {
     private PlayerController pc;
     private int minDist = 10;
     bool active;
+    InteractionInfo script_info;
 
 
     // Use this for initialization
@@ -19,6 +20,7 @@ public class InteractionPerso : MonoBehaviour {
         player = GameObject.FindWithTag("Player");
         pm = canvas.GetComponent<PersonalityManager>();
         pc = player.GetComponent<PlayerController>();
+        script_info = GetComponent<InteractionInfo>();
         active = false;
     }
 
@@ -34,6 +36,7 @@ public class InteractionPerso : MonoBehaviour {
         }
 
         if ((Input.GetKeyDown(KeyCode.Alpha1) && id == 1 || Input.GetKeyDown(KeyCode.Alpha2) && id == 2 || Input.GetKeyDown(KeyCode.Alpha3) && id == 3) && active) {
+            script_info.panelInfo.SetActive(false);
             Unpause();
             panel.SetActive(false);
             Destroy(gameObject);
