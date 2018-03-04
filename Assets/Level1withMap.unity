@@ -1182,6 +1182,7 @@ MonoBehaviour:
   door_open: {fileID: 0}
   door_close: {fileID: 0}
   door_locked: {fileID: 0}
+  isLocked: 0
 --- !u!65 &29396157
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4418,6 +4419,7 @@ MonoBehaviour:
   door_open: {fileID: 0}
   door_close: {fileID: 0}
   door_locked: {fileID: 0}
+  isLocked: 0
 --- !u!65 &130430491
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6498,6 +6500,19 @@ MonoBehaviour:
   door_open: {fileID: 0}
   door_close: {fileID: 0}
   door_locked: {fileID: 0}
+  isLocked: 0
+--- !u!114 &212883394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 212883391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6a40fea62c3844189e3d200bd6b2e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelInfo: {fileID: 731292577}
 --- !u!1001 &219200303
 Prefab:
   m_ObjectHideFlags: 0
@@ -8653,6 +8668,19 @@ MonoBehaviour:
   door_open: {fileID: 0}
   door_close: {fileID: 0}
   door_locked: {fileID: 0}
+  isLocked: 0
+--- !u!114 &306913024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 306913021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6a40fea62c3844189e3d200bd6b2e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelInfo: {fileID: 731292577}
 --- !u!1 &318151824
 GameObject:
   m_ObjectHideFlags: 0
@@ -13823,6 +13851,19 @@ MonoBehaviour:
   door_open: {fileID: 0}
   door_close: {fileID: 0}
   door_locked: {fileID: 0}
+  isLocked: 0
+--- !u!114 &510152236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 510152233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6a40fea62c3844189e3d200bd6b2e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelInfo: {fileID: 731292577}
 --- !u!1 &513463562
 GameObject:
   m_ObjectHideFlags: 0
@@ -16225,6 +16266,7 @@ MonoBehaviour:
   door_open: {fileID: 0}
   door_close: {fileID: 0}
   door_locked: {fileID: 0}
+  isLocked: 0
 --- !u!1 &616198700
 GameObject:
   m_ObjectHideFlags: 0
@@ -17159,6 +17201,7 @@ MonoBehaviour:
   door_open: {fileID: 8300000, guid: 43c5136cc8221584eb035001b6a95a52, type: 3}
   door_close: {fileID: 8300000, guid: d209c6e0cf216fa4599fcafe0fd735b6, type: 3}
   door_locked: {fileID: 0}
+  isLocked: 0
 --- !u!65 &647228325
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18152,6 +18195,7 @@ MonoBehaviour:
   door_open: {fileID: 0}
   door_close: {fileID: 0}
   door_locked: {fileID: 0}
+  isLocked: 0
 --- !u!65 &697651507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24240,6 +24284,18 @@ GameObject:
   m_PrefabParentObject: {fileID: 1895156108779600, guid: 6769d386d755e534fb02820efc0a75e5,
     type: 2}
   m_PrefabInternal: {fileID: 1052159768}
+--- !u!114 &1010420274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1010420273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6a40fea62c3844189e3d200bd6b2e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelInfo: {fileID: 731292577}
 --- !u!114 &1010420275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24256,6 +24312,7 @@ MonoBehaviour:
   door_open: {fileID: 0}
   door_close: {fileID: 0}
   door_locked: {fileID: 0}
+  isLocked: 0
 --- !u!65 &1010420276
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24845,6 +24902,19 @@ MonoBehaviour:
   door_open: {fileID: 0}
   door_close: {fileID: 0}
   door_locked: {fileID: 0}
+  isLocked: 0
+--- !u!114 &1025034233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1025034230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6a40fea62c3844189e3d200bd6b2e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelInfo: {fileID: 731292577}
 --- !u!1 &1033712994
 GameObject:
   m_ObjectHideFlags: 0
@@ -26524,6 +26594,19 @@ MonoBehaviour:
   door_open: {fileID: 0}
   door_close: {fileID: 0}
   door_locked: {fileID: 0}
+  isLocked: 0
+--- !u!114 &1073646912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1073646909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6a40fea62c3844189e3d200bd6b2e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelInfo: {fileID: 731292577}
 --- !u!1 &1084147678
 GameObject:
   m_ObjectHideFlags: 0
@@ -26935,6 +27018,7 @@ MonoBehaviour:
   door_open: {fileID: 0}
   door_close: {fileID: 0}
   door_locked: {fileID: 0}
+  isLocked: 0
 --- !u!65 &1101992666
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38885,6 +38969,19 @@ MonoBehaviour:
   door_open: {fileID: 0}
   door_close: {fileID: 0}
   door_locked: {fileID: 0}
+  isLocked: 0
+--- !u!114 &1605351611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1605351608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6a40fea62c3844189e3d200bd6b2e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelInfo: {fileID: 731292577}
 --- !u!1001 &1605587530
 Prefab:
   m_ObjectHideFlags: 0
@@ -48311,6 +48408,7 @@ MonoBehaviour:
   door_open: {fileID: 0}
   door_close: {fileID: 0}
   door_locked: {fileID: 0}
+  isLocked: 0
 --- !u!65 &1998797412
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51495,23 +51593,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2123885595}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &2126307617 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1195549569494458, guid: 6769d386d755e534fb02820efc0a75e5,
-    type: 2}
-  m_PrefabInternal: {fileID: 1052159768}
---- !u!65 &2126307621
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2126307617}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.288983, y: 5.2609806, z: 0.2948471}
-  m_Center: {x: 0.010843045, y: 0.10692036, z: -0.14742212}
 --- !u!1 &2127250030
 GameObject:
   m_ObjectHideFlags: 0
