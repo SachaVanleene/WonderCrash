@@ -5268,6 +5268,11 @@ Prefab:
       propertyPath: m_AnchoredPosition.x
       value: -0.1000061
       objectReference: {fileID: 0}
+    - target: {fileID: 114135893772760298, guid: ae573a54acdaf3c49a644cb5dc4cb553,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1636136798}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae573a54acdaf3c49a644cb5dc4cb553, type: 2}
   m_IsPrefabParent: 0
@@ -40183,6 +40188,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1505895262303126, guid: 7915d709e4b44294db7ac23372602b06,
     type: 2}
   m_PrefabInternal: {fileID: 1352265613}
+--- !u!114 &1636136798 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114997482453908122, guid: 7915d709e4b44294db7ac23372602b06,
+    type: 2}
+  m_PrefabInternal: {fileID: 1352265613}
+  m_Script: {fileID: 11500000, guid: 892ec3c22f0230a4e916d3c8ce1331a8, type: 3}
 --- !u!1001 &1637310750
 Prefab:
   m_ObjectHideFlags: 0
