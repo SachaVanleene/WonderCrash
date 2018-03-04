@@ -77,7 +77,7 @@ public class PlayerStats : MonoBehaviour {
         }
         if(currentSoupcon >= maxSoupconLevel && !spotted)
         {
-            spotted = true;
+            setSpotted(true);
         }
 
 	}
