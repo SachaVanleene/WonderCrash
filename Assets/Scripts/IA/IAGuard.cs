@@ -28,6 +28,8 @@ public class IAGuard : MonoBehaviour {
     GameObject[] dest;
     public List<GameObject> Destination;
 
+    AudioSource alert_sound;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -49,6 +51,7 @@ public class IAGuard : MonoBehaviour {
     {
         currentDestination = GetNextDestination();
         playerTransform = player.transform;
+        alert_sound = GetComponent<AudioSource>();
     }
 
 
@@ -65,6 +68,7 @@ public class IAGuard : MonoBehaviour {
     {
         if (!movingToPlayer)
         {
+            alert_sound.Play();
             currentDestination = player.transform;
             //playerTransform = player.transform;
             timeSinceNotSeenPlayer = 0f;
@@ -105,7 +109,7 @@ public class IAGuard : MonoBehaviour {
                 Vector3 direction = (playerTransform.position - (transform.position + upTransform)).normalized;
                 if (Physics.Linecast(cone.transform.position, playerTransform.position, out hit,maskLayer))
                 {
-                    Debug.LogError("Ca collide tag"+hit.transform.tag);
+                   // Debug.LogError("Ca collide tag"+hit.transform.tag);
                     Debug.DrawLine(cone.transform.position, playerTransform.position, Color.red);
                     Debug.DrawLine(cone.transform.position, hit.transform.position, Color.green);
                     if (hit.transform.tag == "Player")
@@ -193,7 +197,7 @@ public class IAGuard : MonoBehaviour {
     void LosingTarget()
     {
         agent.SetDestination(agent.transform.position);
-        Debug.LogError("Je passe dans la fonction");
+        //Debug.LogError("Je passe dans la fonction");
         movingToPlayer = false;
         currentDestination = agent.transform;
         anim.SetTrigger("targetLost");
