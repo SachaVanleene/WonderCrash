@@ -85,8 +85,17 @@ public static class Dialogues {
     };
 
     public static Conv GetConv(string id) {
-        Conv text;
-        _conv.TryGetValue(id, out text);
-        return text;
+        Conv conv;
+        Conv erreur = new Conv();
+        erreur.interactionListe = new List<Interaction>();
+        erreur.interactionListe.Add(new Interaction { id = 0, interaction = "Je n'ai pas envie de parler", reponseListe = null });
+
+        if (_conv.TryGetValue(id, out conv)) {
+            return conv;
+        } else
+        {
+            return erreur;
+        }
+            
     }
 }

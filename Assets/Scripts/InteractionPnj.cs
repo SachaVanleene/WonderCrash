@@ -7,6 +7,8 @@ public class InteractionPnj : MonoBehaviour
 {
 
     public int id;
+    private bool[] hasTalked = new bool[] { false,false,false };
+
     private int minDistToTalk = 20;
     private GameObject player;
     private List<Interaction> qList;
@@ -26,12 +28,6 @@ public class InteractionPnj : MonoBehaviour
         pc = player.GetComponent<PlayerController>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-
-    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -44,9 +40,8 @@ public class InteractionPnj : MonoBehaviour
     }
     void OnTriggerStay()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && hasTalked[pc.getCurrentCharacter()-1] == false)
         {
-            Debug.LogError("interaction");
             panel.SetActive(true);
             int currentCharacter = pc.getCurrentCharacter();
             qList = dm.GetDialogue(0, id, currentCharacter);
@@ -55,6 +50,11 @@ public class InteractionPnj : MonoBehaviour
             dm.setButtonQuestion(qCourante.interaction);
             reponsesQuestion = qCourante.reponseListe;
             dm.AfficheDialogue(qCourante, qList);
+
+            for (int i = 0; i < 3; i++)
+            {
+                hasTalked[pc.getCurrentCharacter()-1] = true;
+            }
         }
     }
 
@@ -64,6 +64,8 @@ public class InteractionPnj : MonoBehaviour
         {
             panelInfo.SetActive(false);
             panelInfo.GetComponentInChildren<Text>().text = "";
+            
         }
+
     }
 }

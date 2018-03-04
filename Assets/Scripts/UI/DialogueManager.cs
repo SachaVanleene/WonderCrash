@@ -71,7 +71,6 @@ public class DialogueManager : MonoBehaviour {
         if (reponsesQuestion != null)
         {
             endConv.gameObject.SetActive(false);
-            Debug.LogError("Y a des reponses");
             foreach (Rep rep in reponsesQuestion)
             {
                 reponses[i].gameObject.SetActive(true);
@@ -96,6 +95,8 @@ public class DialogueManager : MonoBehaviour {
         player.GetComponent<PlayerController>().talking = false;
         panel.SetActive(false);
         Time.timeScale = 1;
+
+
     }
 
     static public GameObject getChildGameObject(GameObject fromGameObject, string withName)
