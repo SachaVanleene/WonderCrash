@@ -14,6 +14,7 @@ public class DialogueManager : MonoBehaviour {
     private List<Interaction> qList;
     private List<Rep> reponsesQuestion;
     private PlayerStats ps;
+    private string progress;
 
     private GameObject player;
 
@@ -51,6 +52,7 @@ public class DialogueManager : MonoBehaviour {
     {
         int idQSuivante = reponsesQuestion[idReponse].interacSuiv;
         int soupcon = reponsesQuestion[idReponse].soupcon;
+        progress = reponsesQuestion[idReponse].progress.ToString();
         ps.incrSoupcon((float) soupcon);
 
         foreach (Interaction q in qList)
@@ -122,5 +124,8 @@ public class DialogueManager : MonoBehaviour {
         getChildGameObject(player, "Main Camera").GetComponent<CameraFPS>().talking = false;
     }
 
-
+    public string GetProgress()
+    {
+        return progress;
+    }
 }

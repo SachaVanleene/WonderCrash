@@ -268,7 +268,7 @@ public static class Dialogues {
             new Interaction { id = 4, interaction = "Dommage pour elle... Allez lui annoncer la mauvaise nouvelle !", reponseListe = null },
             new Interaction { id = 5, interaction = "Je pense pas que ça soit ça... Le plus simple est que vous alliez la voir directement.", reponseListe = null },
             new Interaction { id = 6, interaction = "Effectivement ça doit être cela. Je vais annoncer la nouvelle à la patiente.", reponseListe = null },
-            new Interaction { id = 6, interaction = "Mais vous n'êtes pas médecin? Vous êtes le patient en fuite ! GARDES !!", reponseListe = null },
+            new Interaction { id = 7, interaction = "Mais vous n'êtes pas médecin? Vous êtes le patient en fuite ! GARDES !!", reponseListe = null },
         } } },
 
         //Conversation (niveau 1, pnj 4, personalité 3)
