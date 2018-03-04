@@ -62,7 +62,7 @@ public class Manager : MonoBehaviour {
         if(notepadToGet == 2)
         {
             cellHeroDoor = GameObject.Find("Door_hero");
-            cellHeroDoor.tag = "Door";
+            cellHeroDoor.GetComponent<DoorPivoter>().Unlock();
         }
         if(notepadToGet == 0)
         {

@@ -14,11 +14,13 @@ public class DoorPivoter : MonoBehaviour {
 
     private bool isOpened = true;
     private bool isOpening = false;
+    public bool isLocked = false;
     private float openAngle;
     private float closedAngle;
     private float currentAngle;
     private AudioSource source;
     private bool soundplaying;
+
     private void Start()
     {
         closedAngle = transform.eulerAngles.y;
@@ -72,17 +74,16 @@ public class DoorPivoter : MonoBehaviour {
 
     public void SwitchDoor()
     {
-        if (this.gameObject.tag != "Door_locked"){
+        if (!isLocked){
             soundplaying = false;
             isOpened = !isOpened;
             isOpening = true;
         }  
     }
-    public void DoorLock(bool locked)
+
+    public void Unlock()
     {
-        if(locked != true)
-        {
-            SwitchDoor();
-        }
+        isLocked = false;
     }
+
 }
