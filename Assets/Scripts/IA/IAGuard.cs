@@ -28,6 +28,8 @@ public class IAGuard : MonoBehaviour {
     GameObject[] dest;
     public List<GameObject> Destination;
 
+    AudioSource alert_sound;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -49,6 +51,7 @@ public class IAGuard : MonoBehaviour {
     {
         currentDestination = GetNextDestination();
         playerTransform = player.transform;
+        alert_sound = GetComponent<AudioSource>();
     }
 
 
@@ -65,6 +68,7 @@ public class IAGuard : MonoBehaviour {
     {
         if (!movingToPlayer)
         {
+            alert_sound.Play();
             currentDestination = player.transform;
             //playerTransform = player.transform;
             timeSinceNotSeenPlayer = 0f;
