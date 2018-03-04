@@ -101,8 +101,6 @@ public class DialogueManager : MonoBehaviour {
         player.GetComponent<PlayerController>().talking = false;
         panel.SetActive(false);
         Time.timeScale = 1;
-
-
     }
 
     static public GameObject getChildGameObject(GameObject fromGameObject, string withName)
@@ -127,5 +125,9 @@ public class DialogueManager : MonoBehaviour {
     public string GetProgress()
     {
         return progress;
+    }
+
+    public void SetProgress(string valProgress) {
+        progress = valProgress;
     }
 }

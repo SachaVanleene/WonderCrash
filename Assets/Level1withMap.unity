@@ -12320,7 +12320,7 @@ Prefab:
         type: 2}
       propertyPath: panelInfo
       value: 
-      objectReference: {fileID: 865841742}
+      objectReference: {fileID: 731292577}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f653a1a15247c441a30a4fb9735b19f, type: 2}
   m_IsPrefabParent: 0
@@ -19540,7 +19540,7 @@ Prefab:
       objectReference: {fileID: 986788869}
     - target: {fileID: 1417795548047500, guid: 36818d0b927f2274db863a0f21254fb4, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36818d0b927f2274db863a0f21254fb4, type: 2}
@@ -35899,7 +35899,33 @@ Prefab:
       propertyPath: m_Name
       value: Patient (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114485264650152166, guid: 9458babfbcc99d644a739ec32378dec2,
+        type: 2}
+      propertyPath: panelInfo
+      value: 
+      objectReference: {fileID: 731292577}
+    - target: {fileID: 114485264650152166, guid: 9458babfbcc99d644a739ec32378dec2,
+        type: 2}
+      propertyPath: canvasDialogue
+      value: 
+      objectReference: {fileID: 139099960}
+    - target: {fileID: 114485264650152166, guid: 9458babfbcc99d644a739ec32378dec2,
+        type: 2}
+      propertyPath: panel
+      value: 
+      objectReference: {fileID: 139099961}
+    - target: {fileID: 114485264650152166, guid: 9458babfbcc99d644a739ec32378dec2,
+        type: 2}
+      propertyPath: id
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114485264650152166, guid: 9458babfbcc99d644a739ec32378dec2,
+        type: 2}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 1025034230}
+    m_RemovedComponents:
+    - {fileID: 114124594336039940, guid: 9458babfbcc99d644a739ec32378dec2, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9458babfbcc99d644a739ec32378dec2, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1787758239

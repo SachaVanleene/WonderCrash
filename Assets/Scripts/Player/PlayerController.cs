@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
         {
             elapsed += Time.deltaTime;
             
-            if (elapsed >= 1f) { 
+            if (elapsed >= 0.1f) { 
                 elapsed = 0;
                 
                 if (characters[0] == 2) stats.incrCraziness(1.5f);

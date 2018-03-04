@@ -56,9 +56,9 @@ public class InteractionPnj : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && hasTalked[pc.getCurrentCharacter()-1] == false)
         {
             panel.SetActive(true);
+
             int currentCharacter = pc.getCurrentCharacter();
             qList = dm.GetDialogue(currentScene.buildIndex - 1, id, currentCharacter);
-
             qCourante = qList[0];
             dm.setButtonQuestion(qCourante.interaction);
             reponsesQuestion = qCourante.reponseListe;
@@ -75,6 +75,7 @@ public class InteractionPnj : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            dm.SetProgress("WAIT");
             panelInfo.SetActive(false);
             panelInfo.GetComponentInChildren<Text>().text = "";
 
