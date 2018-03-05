@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
     public void Play()
     {
         loadingScreen.SetActive(true);
-        SceneManager.LoadScene("Beta");
+        SceneManager.LoadScene("Scene/Beta 1");
     }
 
     public void PlayFromMenu()
