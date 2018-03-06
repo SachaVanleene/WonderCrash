@@ -22,11 +22,11 @@ Vous vous réveillez dans la peau d'Ernest avec une seule envie: vous échapper 
 	- Ajout des conditions de défaites. Détection par un garde ou barre de soupçon qui atteint sa valeur maximal.
 	- Ajout de la ocndition de transistion de la scène tutoriel au niveau principal.
 	- Ajout de la condition de victoire du jeu.
-## Implication dans les autres features:
-	- Débbuggage du fonctionemment des dialogues.
-	- Amélioration dans l'affichage de l'UI pour intéragir avec les PNJ ou les portes
-	- Amélrioration du sytème de mise en pause lors d'intéraction avec les personnages
-	- Build Final en corrigeant le fonctionnement des portes et des PN
+## Implication dans les autres features
+- Débbuggage du fonctionemment des dialogues.
+- Amélioration dans l'affichage de l'UI pour intéragir avec les PNJ ou les portes
+- Amélrioration du sytème de mise en pause lors d'intéraction avec les personnages
+- Build Final en corrigeant le fonctionnement des portes et des PN
 ## Comment jouer ?
 
 You just have to run OP_GM.exe
