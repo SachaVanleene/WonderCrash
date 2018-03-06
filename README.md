@@ -9,6 +9,15 @@ Vous vous réveillez dans la peau d'Ernest avec une seule envie: vous échapper 
         - Caméra 
         - Animation 
         - Son
+ - Weapons : - Sacha 100%
+	- Switching System - Sacha
+	- Shooting System - Sacha
+	- Generic Scripting - Sacha
+	- AKM (Animated + sound) - Sacha
+	- Gatling (Animated + sound) - Sacha
+	- Flamethrower (Animated using particleSystem + animation + sound) - Sacha
+	- Katana( Melee Weapon, animated + sound) - Sacha
+        
 - IA des gardes, s'inspire du fonctionnement des gardes dans Assasin'S Creed :
         - Dispose d'une barre de détection , une fois le joeur detecté le garde vous pourchassera et sa barre augmentera, lorsque sa barre augmente cela augmente sa vitesse. Attention si sa barre atteint son niveau maximal vous avez perdu.
         - Les gardes vous détectent si vous incarnez votre personnalité de patient ou de médecin.
