@@ -32,7 +32,7 @@ Vous vous réveillez dans la peau d'Ernest avec une seule envie: vous échapper 
 You just have to run OP_GM.exe
  
 ## Controles
-La plus part des mécaniques sont expliqués dans le jeu toute fois je vais dresser quelqus explications supllémentaires ici:
+La plus part des mécaniques sont expliqués dans le jeu toute fois je vais dresser quelqus explications supllémentaires ici :
 	- Une fois que vous serez en possesion de vos 3 personnalités (Vous devz trouver les 3 carnets bleues). Vous pourrez passer au vrai niveau.
 	- Vous disposez d'une qéquence de dialogue par personnalité et par PNJ ! 
 	- Attention une fois que vous avez parlé avec un PNJ en incarnant uen perosnnalté vous ne pourrez plus lui parler avec cette même personnalité. 
