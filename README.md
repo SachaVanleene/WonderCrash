@@ -5,7 +5,7 @@
 Vous vous réveillez dans la peau d'Ernest avec une seule envie: vous échapper de l'asile dans lequel on vous a interné de force. Découvrez vos multiples personnalités et utilisez les à bon escient pour tromper les gardes et le personnel médical. Frayez vous un chemin vers la sortie, et à vous la liberté !
 
 ## Features développé intégralement par moi même 
-- Déplacement du personnage : 
+ - Déplacement du personnage : 
         - Caméra 
         - Animation 
         - Son
