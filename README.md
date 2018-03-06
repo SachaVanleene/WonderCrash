@@ -6,7 +6,7 @@ Vous vous réveillez dans la peau d'Ernest avec une seule envie: vous échapper 
 
 ## Features développé intégralement par moi même 
 - Déplacement du personnage: Caméra - animation - son
-- IA des gardes : S'inspire du fonctionnement des gardes dans Assasin'S Creed
+- IA des gardes : S'inspire du fonctionnement des gardes dans Assasin'S Creed :
         - Dispose d'une barre de détection , une fois le joeur detecté le garde vous pourchassera et sa barre augmentera, lorsque sa barre augmente cela augmente sa vitesse. Attention si sa barre atteint son niveau maximal vous avez perdu.
         - Les gardes vous détectent si vous incarnez votre personnalité de patient ou de médecin.
         - Vous pouvez utiliser votre personnalité de garde afin de les eviter attention si vous changer de personnalité devant eux ils vous reconnaitront !  
