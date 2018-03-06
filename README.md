@@ -28,7 +28,7 @@ Vous vous réveillez dans la peau d'Ernest avec une seule envie: vous échapper 
 - Build Final en corrigeant le fonctionnement des portes et des PNJ
 ## Comment jouer ?
 
-You just have to run OP_GM.exe
+Télécharger le jeu en suivant ce lien : https://gamejolt.com/games/Breaking_Order/323986
  
 ## Controles
 La plus part des mécaniques sont expliqués dans le jeu toute fois je vais dresser quelqus explications supplémentaires ici :
