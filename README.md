@@ -33,10 +33,11 @@ You just have to run OP_GM.exe
  
 ## Controles
 La plus part des mécaniques sont expliqués dans le jeu toute fois je vais dresser quelqus explications supllémentaires ici :
-	- Une fois que vous serez en possesion de vos 3 personnalités (Vous devz trouver les 3 carnets bleues). Vous pourrez passer au vrai niveau.
-	- Vous disposez d'une qéquence de dialogue par personnalité et par PNJ ! 
-	- Attention une fois que vous avez parlé avec un PNJ en incarnant uen perosnnalté vous ne pourrez plus lui parler avec cette même personnalité. 
-	- Certain PNJ peuvent vou ouvrir des portes afin d'éviter les gardes.
+- Une fois que vous serez en possesion de vos 3 personnalités (Vous devz trouver les 3 carnets bleues). Vous pourrez passer au vrai niveau.
+- Vous disposez d'une qéquence de dialogue par personnalité et par PNJ ! 
+- Attention une fois que vous avez parlé avec un PNJ en incarnant uen perosnnalté vous ne pourrez plus lui parler avec cette même personnalité. 
+- Certain PNJ peuvent vou ouvrir des portes afin d'éviter les gardes.
+	
 ## Conclusion
 Une très bonne expérience. Première GameJam pour moi, cela m'a permis de mettre en pratique mes conaissances et d'en apprendre de nouvelles. Satisfait du jeu puisque nous avons fait puisque nous avons respecté le thème imposé par Ubisoft : Ordre et Désorde. Ainsi que les styles qui nous ont été imposés : Dialogue, Survie et Stratégie.
 
