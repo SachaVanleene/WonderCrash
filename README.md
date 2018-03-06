@@ -7,17 +7,17 @@ Vous vous réveillez dans la peau d'Ernest avec une seule envie: vous échapper 
 ## Features développé intégralement par moi même 
 -Déplacement du personnage: Caméra - animation - son
 -IA des gardes : S'inspire du fonctionnement des gardes dans Assasin'S Creed
-      - Dispose d'une barre de détection , une fois le joeur detecté le garde vous pourchassera et sa barre augmentera, lorsque sa barre augmente cela augmente sa vitesse. Attention si sa barre atteint son niveau maximal vous avez perdu.
-      - Les gardes vous détectent si vous incarnez votre personnalité de patient ou de médecin.
-      - Vous pouvez utiliser votre personnalité de garde afin de les eviter attention si vous changer de personnalité devant eux ils vous reconnaitront !  
-      - Les gardes continueront de vous pourchasser sauf si ils vous perdent de vue pendant 2 secondes. 
-      - La barre des gardes n'augmente que lorsqu'ils vous ont réellement en vue même si ils sont dans un état de poursuite.
-      - Les gardes cesseront de vous pourchasser si ils vous perdent de vue pendant plus de 2 secondes. Leurs barre de détection et leur vitesse reviendra peut à peu à leurs valeur initiale.
-      - Animation et sons de détection.
+        - Dispose d'une barre de détection , une fois le joeur detecté le garde vous pourchassera et sa barre augmentera, lorsque sa barre augmente cela augmente sa vitesse. Attention si sa barre atteint son niveau maximal vous avez perdu.
+        - Les gardes vous détectent si vous incarnez votre personnalité de patient ou de médecin.
+        - Vous pouvez utiliser votre personnalité de garde afin de les eviter attention si vous changer de personnalité devant eux ils vous reconnaitront !  
+        - Les gardes continueront de vous pourchasser sauf si ils vous perdent de vue pendant 2 secondes. 
+        - La barre des gardes n'augmente que lorsqu'ils vous ont réellement en vue même si ils sont dans un état de poursuite.
+        - Les gardes cesseront de vous pourchasser si ils vous perdent de vue pendant plus de 2 secondes. Leurs barre de détection et leur vitesse reviendra peut à peu à leurs valeur initiale.
+        - Animation et sons de détection.
 - GameManager :
-      - Ajout des conditions de défaites. Détection par un garde ou barre de soupçon qui atteint sa valeur maximal.
-      - Ajout de la ocndition de transistion de la scène tutoriel au niveau principal.
-      - Ajout de la condition de victoire du jeu.
+        - Ajout des conditions de défaites. Détection par un garde ou barre de soupçon qui atteint sa valeur maximal.
+        - Ajout de la ocndition de transistion de la scène tutoriel au niveau principal.
+        - Ajout de la condition de victoire du jeu.
 ## Implication dans les autres features:
 - Débbuggage du fonctionemment des dialogues.
 - Amélioration dans l'affichage de l'UI pour intéragir avec les PNJ ou les portes
