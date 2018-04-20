@@ -34,7 +34,7 @@ Télécharger le jeu en suivant ce lien : https://gamejolt.com/games/Breaking_Or
 La plus part des mécaniques sont expliqués dans le jeu toute fois je vais dresser quelqus explications supplémentaires ici :
 - Une fois que vous serez en possesion de vos 3 personnalités (Vous devez trouver les 3 carnets bleues). Vous pourrez passer au vrai niveau.
 - Vous disposez d'une séquence de dialogue par personnalité et par PNJ ! 
-- Attention une fois que vous avez parlé avec un PNJ en incarnant uen perosnnalté vous ne pourrez plus lui parler avec cette même personnalité. 
+- Attention une fois que vous avez parlé avec un PNJ en incarnant uen perosnnalité vous ne pourrez plus lui parler avec cette même personnalité. 
 - Certain PNJ peuvent vous ouvrir des portes afin d'éviter les gardes.
 	
 ## Conclusion
